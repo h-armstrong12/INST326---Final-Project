@@ -1,0 +1,9 @@
+Title: Somewhere Over the Rainbow, Genre: Pop, Emotion: Uplifting
+Title: Lose Yourself, Genre: Hip-Hop, Emotion: Motivated
+Title: Clair de Lune, Genre: Classical, Emotion: Calm
+Title: Happy, Genre: Pop, Emotion: Happy
+Title: Eye of the Tiger, Genre: Rock, Emotion: Energized
+Title: Someone Like You, Genre: Pop, Emotion: Sad
+Title: Shake It Off, Genre: Pop, Emotion: Joyful
+Title: Under Pressure, Genre: Rock, Emotion: Stressed
+Title: Bohemian Rhapsody, Genre: Rock, Emotion: Eclectic
