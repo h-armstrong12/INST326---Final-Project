@@ -9,6 +9,7 @@ happiness, motivation, relaxation) in people.
 """
 import time
 import methodholder
+import re
 
 #username input
 
@@ -19,17 +20,12 @@ if username == "":
 
 methodholder.intro_username(username)
 
-selection = input("What would you like to do: ")
-if selection.lower == "select":
-    methodholder.desiredlist
-if selection.lower == "recommend":
-    methodholder.recommendation
-if selection.lower == "randomize":
-    methodholder.randomize
-if selection.lower == "alter":
-    methodholder.altertracks
-else:
-    print("We were unable to identify what you typed it. Why dont you try again?")
+while True:
+    selection = input("What would you like to do: ").lower()
+    methodholder.decision(selection, username)
+    if str(selection) == "select" or "recommend" or "randomize" or "alter":
+        break
+    
 
 
 
