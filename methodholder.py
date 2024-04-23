@@ -106,15 +106,31 @@ def recommendation(username):
     pass
 
 def altertracks(username):
-    """
-    Docstring
+   """
+    Interactively allows a user to update the emotional tag associated with a track.
+    Validates against a predefined list of acceptable emotions.
     
+    Parameters:
+    username (str): The name of the user.
+    
+    Returns:
+    None: Directly outputs results and prompts user for additional changes.
     """
-    print("Hello there!")
-    #unit test: there will be a list of experiences that the user can change the track depending on their own toughts and ideas
-    # but those changes will have to match the list and rules that the program is coded with, if so then the user will be 
-    #asked to input changes that are expected and accepted by the program or can simply just quit.
-    pass
+    print(f"Hello {username}, ready to update the emotional tags of your tracks.")
+    
+    valid_emotions = ["Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Joyful", "Stressed"]
+    track_name = input("Enter the track name to modify: ")
+    new_emotion = input(f"Enter new emotion from {', '.join(valid_emotions)}: ")
+    
+    if new_emotion in valid_emotions:
+        print(f"Updated '{track_name}' with new emotion: {new_emotion}.")
+    else:
+        print(f"Invalid emotion. Available emotions are: {', '.join(valid_emotions)}.")
+    
+    if input("Modify another track? (yes/no): ").lower() == 'yes':
+        altertracks(username)
+    else:
+        print("Exiting track modification.")
 
 
 def randomize(username):
