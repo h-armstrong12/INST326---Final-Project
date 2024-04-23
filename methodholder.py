@@ -41,6 +41,7 @@ def desiredlist(username):
     Docstring
     
     """
+    #all this code allows users to access their desired list of songs based on genre of music
     recommendlist = []
     print("""Here's a list of genre's to chose from:
           Pop, Country, Rock, Classical, R&B, Soul, HipHop""") #will be updated later
@@ -57,15 +58,29 @@ def desiredlist(username):
                 if search != None:
                     trial = search.group(1)
                     recommendlist.append(trial)
-                
-            #if discover.group(1) == musicprefer.casefold():
-            #    search = (r"Title: +([a-zA-Z0-9]+.+), Genre:", i)
-            #    recommendlist.append(search.group(1))
         print(recommendlist)
+        print("Here is your selection of music " + username)
 
-
-
-
+        emotionprefer = input("Would you like to search for specific emotions/feelings that is found in this selection of music? (yes/no)")
+        if emotionprefer.lower() == "yes":
+            desiredemotionlist = []
+            print("List of emotions throughout the list: (Happy), (Sad), (Energetic), (Calm) (...)")
+            desiredemotion = input("What are you in the mood for?: ")
+            file
+            content
+            for x in content:
+                matchemotion = re.search(r"Emotion: +([a-zA-Z]+)", x)
+                if matchemotion != None:
+                    pairemotion = matchemotion.group(1)
+                if pairemotion == desiredemotion:
+                    tracksemotion = re.search(r"Title: +([a-zA-Z0-9]+.+), Genre:", x)
+                    if tracksemotion != None:
+                        desiredsongemotion = tracksemotion.group(1)
+                        desiredemotionlist.append(desiredsongemotion)
+            print(desiredemotionlist)
+        if emotionprefer.lower() == "no":
+            pass #code something in that will take the user back to the start.
+        
     #musicprefer: users will input the genre they would like to listen to (must be exactly as spelled)
     #unit test: make sure that the name of the genre(s) are spelled correctly, or the program wont understand. 
     #will ask user to input it again
@@ -78,7 +93,6 @@ def desiredlist(username):
     #will ask user to input it again
 
     # a list of songs that fit these descriptions (genre/experience) will be presented to the user.
-    print("Here is your selection of music " + username)
 
 
     
