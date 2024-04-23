@@ -106,7 +106,7 @@ def recommendation(username):
     pass
 
 def altertracks(username):
-   """
+    """
     Interactively allows a user to update the emotional tag associated with a track.
     Validates against a predefined list of acceptable emotions.
     
@@ -116,8 +116,8 @@ def altertracks(username):
     Returns:
     None: Directly outputs results and prompts user for additional changes.
     """
+   
     print(f"Hello {username}, ready to update the emotional tags of your tracks.")
-    
     valid_emotions = ["Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Joyful", "Stressed"]
     track_name = input("Enter the track name to modify: ")
     new_emotion = input(f"Enter new emotion from {', '.join(valid_emotions)}: ")
