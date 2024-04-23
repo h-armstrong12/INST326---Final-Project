@@ -139,9 +139,13 @@ def randomize(username):
     
     """
     print("Hello there!")
+    print("Here is a randomized list of 10 songs from the songlist file.")
+    file = open("songlist.txt", "r")
+    content = file.read()
+    listData = []
+    listData = content.split("\n")
+    #print(listData)
+    print(random.sample(listData, 10))
+
     #unit test: test to make sure there is 10 random tracks from the list presented to the user.
-    pass
-
-
-    
         
