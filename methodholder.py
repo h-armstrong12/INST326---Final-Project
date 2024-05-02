@@ -3,6 +3,7 @@
 import time
 import re
 import random
+#import emotions
 #import songlist
 def intro_username(username):
     """
@@ -46,22 +47,22 @@ def desiredlist(username):
     print("""Here's a list of genre's to chose from:
           Pop, Country, Rock, Classical, R&B, Soul, HipHop""") #will be updated later
     musicprefer = input("Enter what genre of music you would like to listen to: ")
-    if musicprefer == "Pop" or "Country" or "Rock" or "Classical" or "R&B" or "Soul" or "Hiphop":
+    if musicprefer.casefold() == "Pop".casefold() or "Country".casefold() or "Rock".casefold() or "Classical".casefold() or "R&B".casefold() or "Soul".casefold() or "Hiphop".casefold():
         file = open("songlist.txt", "r")
         content = file.readlines()
         for i in content:
             discover = re.search(r"Genre: +([a-zA-Z]+)", i)
             if discover != None:
                 capture = discover.group(1)
-            if capture == musicprefer:
+            if capture.casefold() == musicprefer.casefold():
                 search = re.search(r"Title: +([a-zA-Z0-9]+.+), Genre:", i)
                 if search != None:
                     trial = search.group(1)
                     recommendlist.append(trial)
         print(recommendlist)
-        print("Here is your selection of music " + username)
+        print(f"Here is your selection of music, {username} we hope you enjoy!")
 
-        emotionprefer = input("Would you like to search for specific emotions/feelings that is found in this selection of music? (yes/no)")
+        emotionprefer = input("Would you like to search for specific emotions/feelings that is found in this selection of music? (yes/no): ")
         if emotionprefer.lower() == "yes":
             desiredemotionlist = []
             print("List of emotions throughout the list: (Happy), (Sad), (Energetic), (Calm) (...)")
@@ -78,8 +79,10 @@ def desiredlist(username):
                         desiredsongemotion = tracksemotion.group(1)
                         desiredemotionlist.append(desiredsongemotion)
             print(desiredemotionlist)
+            if len(desiredemotionlist) == 0:
+                print("Sorry Hannah, looks like there's no songs here which fit that description.")
         if emotionprefer.lower() == "no":
-            pass #code something in that will take the user back to the start.
+            quit() #code something in that will take the user back to the start.
         
     #musicprefer: users will input the genre they would like to listen to (must be exactly as spelled)
     #unit test: make sure that the name of the genre(s) are spelled correctly, or the program wont understand. 
@@ -102,6 +105,16 @@ def recommendation(username):
     
     """
     print("Hello there!")
+    time.sleep(1)
+    emotion_select = input("""How/What are you feeling? (select 1): 
+"Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Stressed",
+"Hopeful", "Love", "Angry", "Bored", "Confident", "Curious", "Fear"
+          """)
+    
+    if emotion_select.lower() == "happy" or "sad" or "energized" or "calm" or "motivated" or "lonely" or "stressed" or "hopeful" or "love" or "angry" or "confident" or "curious" or "fear":
+        print("good work so far")
+
+    
     #unit test: makes sure that the tracks match what the user wants.
     pass
 

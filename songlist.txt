@@ -1,60 +1,60 @@
-Title: Somewhere Over the Rainbow, Genre: Pop, Emotion: Uplifting
-Title: Lose Yourself, Genre: HipHop, Emotion: Motivated
-Title: Clair de Lune, Genre: Classical, Emotion: Calm
-Title: Happy, Genre: Pop, Emotion: Happy
-Title: Eye of the Tiger, Genre: Rock, Emotion: Energized
-Title: Someone Like You, Genre: Pop, Emotion: Sad
-Title: Shake It Off, Genre: Pop, Emotion: Joyful
-Title: Under Pressure, Genre: Rock, Emotion: Stressed
-Title: Bohemian Rhapsody, Genre: Rock, Emotion: Eclectic
-Title: Rolling in the Deep, Genre: Pop, Emotion: Sad
-Title: Country Roads, Genre: Country, Emotion: Calm
-Title: Jolene, Genre: Country, Emotion: Sad
-Title: Dance the Night, Genre: Pop, Emotion: Happy
-Title: Need You Now, Genre: Country, Emotion: Lonely
-Title: Single Ladies (Put a ring on It), Genre: Pop, Emotion: Energized
-Title: Lookin' for Love, Genre: Country, Emotion
-Title: Party in the U.S.A, Genre: Pop, Emotion: Energized
-Title: I Fall to Pieces, Genre: Country, Emotion: Sad
-Title:
-Title:
-Title:
-Title: 
-Title:
-Title:
-Title: 
-Title:
-Title:
-Title:
-Title: 
-Title:
-Title:
-Title:
-Title: 
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
-Title:
+1: Title: Somewhere Over the Rainbow, Artist: Judy Garland, Genre: Pop, Emotion: Uplifting
+2: Title: Lose Yourself, Artist: Eminem, Genre: HipHop, Emotion: Motivated
+3: Title: Clair de Lune, Artist: Claude Debussy, Genre: Classical, Emotion: Calm
+4: Title: Happy, Artist: Pharrell Williams, Genre: Pop, Emotion: Happy
+5: Title: Eye of the Tiger, Artist: Survivor, Genre: Rock, Emotion: Energized
+6: Title: Someone Like You, Artist: Adele, Genre: Pop, Emotion: Sad
+7: Title: Shake It Off, Artist: Taylor Swift, Genre: Pop, Emotion: Joyful
+8: Title: Under Pressure, Artist: Queen, Genre: Rock, Emotion: Stressed
+9: Title: Bohemian Rhapsody, Artist: Queen, Genre: Rock, Emotion: Eclectic
+10: Title: Rolling in the Deep, Artist: Adele, Genre: Pop, Emotion: Sad
+11: Title: Country Roads, Artist: John Denver, Genre: Country, Emotion: Calm
+12: Title: Jolene, Artist: Dolly Parton, Genre: Country, Emotion: Sad
+13: Title: Dance the Night, Artist: Dua Lipa, Genre: Pop, Emotion: Happy
+14: Title: Need You Now, Artist: Lady A, Genre: Country, Emotion: Lonely
+15: Title: Single Ladies (Put a ring on It), Artist: Beyonce, Genre: Pop, Emotion: Energized
+16: Title: Lookin' for Love, Artist: Johnny Lee, Genre: Country, Emotion
+17: Title: Party in the U.S.A, Artist: Miley Cyrus, Genre: Pop, Emotion: Energized
+18: Title: I Fall to Pieces, Artist: Patsy Cline and The Jordanaires, Genre: Country, Emotion: Sad
+19: Title: 
+20: Title:
+21: Title:
+22: Title: 
+23: Title:
+24: Title:
+25: Title: 
+26: Title:
+27: Title:
+28: Title:
+29: Title: 
+30: Title:
+31: Title:
+32: Title:
+33: Title: 
+34: Title:
+35: Title:
+36: Title:
+37: Title:
+38: Title:
+39: Title:
+40: Title:
+41: Title:
+42: Title:
+43: Title:
+44: Title:
+45: Title:
+46: Title:
+47: Title:
+48: Title:
+49: Title:
+50: Title:
+51: Title:
+52: Title:
+53: Title:
+54: Title:
+55: Title:
+56: Title:
+57: Title:
+58: Title:
+59: Title:
+60: Title:
