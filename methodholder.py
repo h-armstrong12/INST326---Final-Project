@@ -19,25 +19,34 @@ be able to alter/change the feelings/emtotions associated with tracks in our son
 and get a randomized list of songs that will give you the chance to experiment.""")
     time.sleep(2)
     print("\n")
-    print("You have the option to choose to either use the program to: 'select', 'recommend', 'randomize' or 'alter'  ")
+    print("You have the option to choose to either use the program to: 'select', 'recommend', 'randomize' or 'alter' ")
     print("Note: please type your choice correctly or the program will not recognize it.")
     
 
 def decision(selection, username):
     if str(selection) == "select":
-        desiredlist(username)
+        desiredlist(selection, username)
     elif str(selection) == "recommend":
-        recommendation(username)
+        recommendation(selection, username)
     elif str(selection) == "randomize":
-        randomize(username)
+        randomize(selection, username)
     elif str(selection) == "alter":
-        altertracks(username)
+        altertracks(selection, username)
+    elif str(selection) == "exit".casefold():
+        exit()
     else:
-        print("We were unable to identify what you typed it. Why dont you try again?")
+        print("We were unable to identify what you typed in. Why dont you try again?")
         
+def cyclecontinue(selection, username):
+    time.sleep(2)
+    print(f"Hi {username}, you have the choice to either quit the program ('EXIT'), or continue using the other features available.")
+    selection = input("Would you like to use one of these features: 'recommend', 'randomize', 'alter', 'select': ")
+    if selection.casefold == "EXIT".casefold:
+        exit()
+    else: 
+        decision(selection, username)
 
-
-def desiredlist(username):
+def desiredlist(selection, username):
     """
     Docstring
     
@@ -80,10 +89,12 @@ def desiredlist(username):
                         desiredemotionlist.append(desiredsongemotion)
             print(desiredemotionlist)
             if len(desiredemotionlist) == 0:
-                print("Sorry Hannah, looks like there's no songs here which fit that description.")
+                print(f"Sorry {username}, looks like there's no songs here which fit that description.")
         if emotionprefer.lower() == "no":
             quit() #code something in that will take the user back to the start.
         
+    #offer users the chance to do over.
+    cyclecontinue(selection, username)
     #musicprefer: users will input the genre they would like to listen to (must be exactly as spelled)
     #unit test: make sure that the name of the genre(s) are spelled correctly, or the program wont understand. 
     #will ask user to input it again
@@ -146,7 +157,7 @@ def altertracks(username):
         print("Exiting track modification.")
 
 
-def randomize(username):
+def randomize(selection, username):
     """
     Docstring
     
@@ -159,6 +170,8 @@ def randomize(username):
     listData = content.split("\n")
     #print(listData)
     print(random.sample(listData, 10))
+    #offer users the chance to do over.
+    cyclecontinue(selection, username)
 
     #unit test: test to make sure there is 10 random tracks from the list presented to the user.
         
