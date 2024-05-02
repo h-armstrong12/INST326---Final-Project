@@ -107,12 +107,12 @@ def recommendation(username):
     print("Hello there!")
     time.sleep(1)
     emotion_select = input("""How/What are you feeling? (select 1): 
-"Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Stressed",
-"Hopeful", "Love", "Angry", "Bored", "Confident", "Curious", "Fear"
+    "Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Stressed",
+    "Hopeful", "Love", "Angry", "Bored", "Confident", "Curious", "Fear"
           """)
     
     if emotion_select.lower() == "happy" or "sad" or "energized" or "calm" or "motivated" or "lonely" or "stressed" or "hopeful" or "love" or "angry" or "confident" or "curious" or "fear":
-        print("good work so far")
+        print("this code works")
 
     
     #unit test: makes sure that the tracks match what the user wants.
