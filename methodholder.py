@@ -53,8 +53,10 @@ def desiredlist(selection, username):
     """
     #all this code allows users to access their desired list of songs based on genre of music
     recommendlist = []
+    print("\n")
     print("""Here's a list of genre's to chose from:
-          Pop, Country, Rock, Classical, R&B, Soul, HipHop""") #will be updated later
+          Pop, Country, Rock, Classical, R&B, Soul, HipHop""")
+    print("\n")
     musicprefer = input("Enter what genre of music you would like to listen to: ")
     if musicprefer.casefold() == "Pop".casefold() or "Country".casefold() or "Rock".casefold() or "Classical".casefold() or "R&B".casefold() or "Soul".casefold() or "Hiphop".casefold():
         file = open("songlist.txt", "r")
@@ -72,12 +74,14 @@ def desiredlist(selection, username):
         print(f"Here is your selection of music, {username} we hope you enjoy!")
 
         emotionprefer = input("Would you like to search for specific emotions/feelings that is found in this selection of music? (yes/no): ")
+        print("\n")
         if emotionprefer.lower() == "yes":
             content = []
             #content = recommendlist
             #desiredemotionlist = recommendlist
             print("List of emotions throughout the list: (Happy), (Sad), (Energetic), (Calm) (...)")
             desiredemotion = input("What are you in the mood for?: ")
+            print("\n")
             #desiredemotion
             #file
             
