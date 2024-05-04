@@ -64,7 +64,7 @@ def desiredlist(selection, username):
             if discover != None:
                 capture = discover.group(1)
             if capture.casefold() == musicprefer.casefold():
-                search = re.search(r"Title: +([a-zA-Z0-9]+.+), Genre:", i)
+                search = re.search(r"Title: +([a-zA-Z0-9]+.+, Genre:+ [a-zA-Z]+, [a-zA-Z]+: [a-zA-Z]+)", i)
                 if search != None:
                     trial = search.group(1)
                     recommendlist.append(trial)
@@ -73,22 +73,27 @@ def desiredlist(selection, username):
 
         emotionprefer = input("Would you like to search for specific emotions/feelings that is found in this selection of music? (yes/no): ")
         if emotionprefer.lower() == "yes":
-            desiredemotionlist = []
+            content = []
+            #content = recommendlist
+            #desiredemotionlist = recommendlist
             print("List of emotions throughout the list: (Happy), (Sad), (Energetic), (Calm) (...)")
             desiredemotion = input("What are you in the mood for?: ")
-            file
-            content
-            for x in content:
+            #desiredemotion
+            #file
+            
+            for x in recommendlist:
                 matchemotion = re.search(r"Emotion: +([a-zA-Z]+)", x)
-                if matchemotion != None:
-                    pairemotion = matchemotion.group(1)
-                if pairemotion == desiredemotion:
-                    tracksemotion = re.search(r"Title: +([a-zA-Z0-9]+.+), Genre:", x)
-                    if tracksemotion != None:
-                        desiredsongemotion = tracksemotion.group(1)
-                        desiredemotionlist.append(desiredsongemotion)
-            print(desiredemotionlist)
-            if len(desiredemotionlist) == 0:
+                #if matchemotion.group(1) != None:
+                    #desiredemotionlist[x] = content[x]
+                if matchemotion.group(1) == desiredemotion:
+                    content.append(x)
+                    #tracksemotion = re.search(r"Title: +([a-zA-Z0-9]+.+), Genre:", x)
+                # else:
+                #     if tracksemotion != None:
+                #         desiredsongemotion = tracksemotion.group(1)
+                #         desiredemotionlist.append(desiredsongemotion)
+            print(content)
+            if len(content) == 0:
                 print(f"Sorry {username}, looks like there's no songs here which fit that description.")
         if emotionprefer.lower() == "no":
             quit() #code something in that will take the user back to the start.
@@ -124,6 +129,7 @@ def recommendation(username):
     
     if emotion_select.lower() == "happy" or "sad" or "energized" or "calm" or "motivated" or "lonely" or "stressed" or "hopeful" or "love" or "angry" or "confident" or "curious" or "fear":
         print("this code works")
+
 
     
     #unit test: makes sure that the tracks match what the user wants.
