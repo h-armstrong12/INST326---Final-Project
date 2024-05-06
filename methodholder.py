@@ -13,14 +13,15 @@ def intro_username(username):
     print("Hello " + username + ", welcome to (insert program name). A Emotion/Genre-Based Music Library Management and Recommendation System.")
     time.sleep(1)
     print("\n")
-    print("""Here you will be able to select whether you would like to have songs recommened to you based on a series of questions, 
-be able to choose your genre of music and be given a list of recommendations, 
-be able to alter/change the feelings/emtotions associated with tracks in our songlist, 
-and get a randomized list of songs that will give you the chance to experiment.""")
+    print("""Here you will be able to select whether you would like to have a list of songs recommened to you based on a series of questions (recommend), 
+be able to choose your genre of music and be given a list of songs (select), 
+be able to change the feelings associated with the songs in our textfile (alter), 
+and get a randomized list of songs from our text file (randomize).""")
     time.sleep(2)
     print("\n")
-    print("You have the option to choose to either use the program to: 'select', 'recommend', 'randomize' or 'alter' ")
+    print("You have the choice to either: 'select', 'recommend', 'randomize' or 'alter'")
     print("Note: please type your choice correctly or the program will not recognize it.")
+    print("\n")
     
 
 def decision(selection, username):
@@ -33,12 +34,16 @@ def decision(selection, username):
     elif str(selection) == "alter":
         altertracks(selection, username)
     elif str(selection) == "exit".casefold():
+        print("\n")
+        print("You have chosen to quit the program, we hope you enjoyed using the Audio Library.")
         exit()
+
     else:
         print("We were unable to identify what you typed in. Why dont you try again?")
         
 def cyclecontinue(selection, username):
     time.sleep(2)
+    print("\n")
     print(f"Hi {username}, you have the choice to either quit the program ('EXIT'), or continue using the other features available.")
     selection = input("Would you like to use one of these features: 'recommend', 'randomize', 'alter', 'select': ")
     if selection.casefold == "EXIT".casefold:
@@ -72,14 +77,17 @@ def desiredlist(selection, username):
                     recommendlist.append(trial)
         print(recommendlist)
         print(f"Here is your selection of music, {username} we hope you enjoy!")
-
-        emotionprefer = input("Would you like to search for specific emotions/feelings that is found in this selection of music? (yes/no): ")
+        print("\n")
+        emotionprefer = input("Would you like to search for songs in this list that are associated with a certain emotion (yes/no): ")
         print("\n")
         if emotionprefer.lower() == "yes":
             content = []
             #content = recommendlist
             #desiredemotionlist = recommendlist
-            print("List of emotions throughout the list: (Happy), (Sad), (Energetic), (Calm) (...)")
+            print("""List of emotions throughout the list: 
+            "Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Stressed",
+            "Hopeful", "Love", "Angry", "Bored", "Confident", "Curious", "Fear")""")
+            print("\n")
             desiredemotion = input("What are you in the mood for?: ")
             print("\n")
             #desiredemotion
