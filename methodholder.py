@@ -109,7 +109,7 @@ def desiredlist(selection, username):
                 print(f"Sorry {username}, looks like there's no songs here which fit that description.")
         if emotionprefer.lower() == "no":
             quit() #code something in that will take the user back to the start.
-        
+    file.close()
     #offer users the chance to do over.
     cyclecontinue(selection, username)
     #musicprefer: users will input the genre they would like to listen to (must be exactly as spelled)
@@ -127,7 +127,7 @@ def desiredlist(selection, username):
 
 
     
-def recommendation(username):
+def recommendation(username, selection):
     """
     Docstring
     
@@ -138,10 +138,27 @@ def recommendation(username):
     "Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Stressed",
     "Hopeful", "Love", "Angry", "Bored", "Confident", "Curious", "Fear"
           """)
+    realrecommendlist = []
+    emotionlist = ["happy", "sad", "energized", "calm", "motivated", "lonely", "stressed","hopeful", "love", "angry", "bored", "confident", "curious", "fear"]
+    if emotion_select.casefold() in emotionlist:
+        #print("good job")
+        textfile = open("songlist.txt", "r")
+        
+        recommendcontent = textfile.readlines()
+        for i in recommendcontent:
+            findemotion = re.search(r"Emotion: ([a-zA-Z]+)", i)
+            if findemotion != None:
+                newwork = findemotion.group(1)
+            if newwork.casefold() == emotion_select.casefold():
+                secondsearch = re.search(r"(^.*)", i)
+                if secondsearch != None:
+                    newtrial = secondsearch.group(1)
+                realrecommendlist.append(newtrial)
+        print(realrecommendlist)
+    else:
+        print("Did you mean to write something else? Why don't you try again:")
     
-    if emotion_select.lower() == "happy" or "sad" or "energized" or "calm" or "motivated" or "lonely" or "stressed" or "hopeful" or "love" or "angry" or "confident" or "curious" or "fear":
-        print("this code works")
-
+    
 
     
     #unit test: makes sure that the tracks match what the user wants.
