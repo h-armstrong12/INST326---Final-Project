@@ -164,7 +164,7 @@ def recommendation(username, selection):
     #unit test: makes sure that the tracks match what the user wants.
     pass
 
-def altertracks(username):
+def altertracks(username, selection):
     """
     Interactively allows a user to update the emotional tag associated with a track.
     Validates against a predefined list of acceptable emotions.
@@ -177,8 +177,22 @@ def altertracks(username):
     """
    
     print(f"Hello {username}, ready to update the emotional tags of your tracks.")
-    valid_emotions = ["Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Joyful", "Stressed"]
-    track_name = input("Enter the track name to modify: ")
+    valid_emotions = ["happy", "sad", "energized", "calm", "motivated", "lonely", "stressed","hopeful", "love", "angry", "bored", "confident", "curious", "fear"]
+    track_name = input("Enter the track number to modify: ")
+    file = open("songlist.txt", "r")
+    content = file.readlines()
+    for i in content:
+        tracknumber = re.search(r"([0-9]+):", i)
+        if tracknumber != None:
+            capture = tracknumber.group(1)
+        if capture == track_name:
+            wholetrack = re.search(r"(^.*)", i)
+            with open("altersonglist.txt", "a+") as writefile:
+                #print(wholetrack.group(1))
+                writefile.write(wholetrack.group(1) + "\n")
+                
+
+
     new_emotion = input(f"Enter new emotion from {', '.join(valid_emotions)}: ")
     
     if new_emotion in valid_emotions:
@@ -187,7 +201,7 @@ def altertracks(username):
         print(f"Invalid emotion. Available emotions are: {', '.join(valid_emotions)}.")
     
     if input("Modify another track? (yes/no): ").lower() == 'yes':
-        altertracks(username)
+        altertracks(username, selection)
     else:
         print("Exiting track modification.")
 
