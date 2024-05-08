@@ -1,2 +1,0 @@
-12: Title: Jolene, Artist: Dolly Parton, Genre: Country, Emotion: Sad
-9: Title: Bohemian Rhapsody, Artist: Queen, Genre: Rock, Emotion: Eclectic

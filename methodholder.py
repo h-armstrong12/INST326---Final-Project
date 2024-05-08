@@ -189,14 +189,25 @@ def altertracks(username, selection):
             wholetrack = re.search(r"(^.*)", i)
             with open("altersonglist.txt", "a+") as writefile:
                 #print(wholetrack.group(1))
-                writefile.write(wholetrack.group(1) + "\n")
-                
-
-
-    new_emotion = input(f"Enter new emotion from {', '.join(valid_emotions)}: ")
-    
+                writefile.write(wholetrack.group(1) + "\n") 
+                        
+    new_emotion = input(f"Enter new emotion from: {', '.join(valid_emotions)}: ")
     if new_emotion in valid_emotions:
-        print(f"Updated '{track_name}' with new emotion: {new_emotion}.")
+        print(f"Updated '{track_name}' with new emotion: {new_emotion}.")   
+        with open("altersonglist.txt", "r") as file:
+            writefile = file.readlines()
+            
+        for i, line in reversed(list(enumerate(writefile))):  
+            if isinstance (line, str):  
+                emotion = re.search(r"Emotion: ([a-zA-Z]+)", line)
+                if emotion != None:
+                    replaceemotion = emotion.group(1)
+                    emotion_str = str(new_emotion).casefold()
+                    writefile[i] = (re.sub(replaceemotion, emotion_str, line))
+                    break
+        with open("altersonglist.txt", "w") as file:
+            file.writelines(writefile)   
+    
     else:
         print(f"Invalid emotion. Available emotions are: {', '.join(valid_emotions)}.")
     
