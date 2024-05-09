@@ -1,18 +1,414 @@
-1: Title: Somewhere Over the Rainbow, Artist: Judy Garland, Genre: Pop, Emotion: Uplifting
-2: Title: Lose Yourself, Artist: Eminem, Genre: HipHop, Emotion: Motivated
-3: Title: Clair de Lune, Artist: Claude Debussy, Genre: Classical, Emotion: Calm
-4: Title: Happy, Artist: Pharrell Williams, Genre: Pop, Emotion: Happy
-5: Title: Eye of the Tiger, Artist: Survivor, Genre: Rock, Emotion: Energized
-6: Title: Someone Like You, Artist: Adele, Genre: Pop, Emotion: Sad
-7: Title: Shake It Off, Artist: Taylor Swift, Genre: Pop, Emotion: Joyful
-8: Title: Under Pressure, Artist: Queen, Genre: Rock, Emotion: Stressed
-9: Title: Bohemian Rhapsody, Artist: Queen, Genre: Rock, Emotion: Eclectic
-10: Title: Rolling in the Deep, Artist: Adele, Genre: Pop, Emotion: Sad
-11: Title: Country Roads, Artist: John Denver, Genre: Country, Emotion: Calm
-12: Title: Jolene, Artist: Dolly Parton, Genre: Country, Emotion: Sad
-13: Title: Dance the Night, Artist: Dua Lipa, Genre: Pop, Emotion: Happy
-14: Title: Need You Now, Artist: Lady A, Genre: Country, Emotion: Lonely
-15: Title: Single Ladies (Put a ring on It), Artist: Beyonce, Genre: Pop, Emotion: Energized
-16: Title: Lookin' for Love, Artist: Johnny Lee, Genre: Country, Emotion
-17: Title: Party in the U.S.A, Artist: Miley Cyrus, Genre: Pop, Emotion: Energized
-18: Title: I Fall to Pieces, Artist: Patsy Cline and The Jordanaires, Genre: Country, Emotion: Sad
+1. Title: "Happy", Artist: Pharrell Williams, Genre: Pop, Emotion: Happy
+2. Title: "I Gotta Feeling", Artist: The Black Eyed Peas, Genre: Pop, Emotion: Happy
+3. Title: "Good Vibrations", Artist: The Beach Boys, Genre: Pop, Emotion: Happy
+4. Title: "Shake It Off", Artist: Taylor Swift, Genre: Pop, Emotion: Happy
+5. Title: "I'm Yours", Artist: Jason Mraz, Genre: Pop, Emotion: Happy
+6. Title: "Don't Worry, Be Happy", Artist: Bobby McFerrin, Genre: Pop, Emotion: Happy
+7. Title: "All of Me", Artist: John Legend, Genre: Pop, Emotion: Sad
+8. Title: "Fix You", Artist: Coldplay, Genre: Pop, Emotion: Sad
+9. Title: "Skinny Love", Artist: Bon Iver, Genre: Pop, Emotion: Sad
+10. Title: "Say Something", Artist: A Great Big World ft. Christina Aguilera, Genre: Pop, Emotion: Sad
+11. Title: "Someone You Loved", Artist: Lewis Capaldi, Genre: Pop, Emotion: Sad
+12. Title: "Can't Stop the Feeling!", Artist: Justin Timberlake, Genre: Pop, Emotion: Energized
+13. Title: "Wake Me Up", Artist: Avicii, Genre: Pop, Emotion: Energized
+14. Title: "Dancing Queen", Artist: ABBA, Genre: Pop, Emotion: Energized
+15. Title: "Uptown Funk", Artist: Mark Ronson ft. Bruno Mars, Genre: Pop, Emotion: Energized
+16. Title: "Roar", Artist: Katy Perry, Genre: Pop, Emotion: Energized
+17. Title: "Shut Up and Dance", Artist: Walk the Moon, Genre: Pop, Emotion: Energized
+18. Title: "Raise Your Glass", Artist: P!nk, Genre: Pop, Emotion: Energized
+19. Title: "Thinking Out Loud", Artist: Ed Sheeran, Genre: Pop, Emotion: Calm
+20. Title: "A Thousand Years", Artist: Christina Perri, Genre: Pop, Emotion: Calm
+21. Title: "Chasing Cars", Artist: Snow Patrol, Genre: Pop, Emotion: Calm
+22. Title: "Say You Won't Let Go", Artist: James Arthur, Genre: Pop, Emotion: Calm
+23. Title: "Fast Car", Artist: Tracy Chapman, Genre: Pop, Emotion: Calm
+24. Title: "The A Team", Artist: Ed Sheeran, Genre: Pop, Emotion: Calm
+25. Title: "Breathe", Artist: Taylor Swift ft. Colbie Caillat, Genre: Pop, Emotion: Calm
+26. Title: "Lost Stars", Artist: Adam Levine, Genre: Pop, Emotion: Calm
+27. Title: "Stronger", Artist: Kelly Clarkson, Genre: Pop, Emotion: Motivated
+28. Title: "Fight Song", Artist: Rachel Platten, Genre: Pop, Emotion: Motivated
+29. Title: "Hall of Fame", Artist: The Script ft. will.i.am, Genre: Pop, Emotion: Motivated
+30. Title: "Titanium", Artist: David Guetta ft. Sia, Genre: Pop, Emotion: Motivated
+31. Title: "Brave", Artist: Sara Bareilles, Genre: Pop, Emotion: Motivated
+32. Title: "The Climb", Artist: Miley Cyrus, Genre: Pop, Emotion: Motivated
+33. Title: "All By Myself", Artist: Celine Dion, Genre: Pop, Emotion: Lonely
+34. Title: "Hello", Artist: Adele, Genre: Pop, Emotion: Lonely
+35. Title: "Lonely", Artist: Justin Bieber & benny blanco, Genre: Pop, Emotion: Lonely
+36. Title: "Wish You Were Here", Artist: Avril Lavigne, Genre: Pop, Emotion: Lonely
+37. Title: "Jar of Hearts", Artist: Christina Perri, Genre: Pop, Emotion: Lonely
+38. Title: "Stressed Out", Artist: twenty one pilots, Genre: Pop, Emotion: Stressed
+39. Title: "Mad World", Artist: Tears for Fears, Genre: Pop, Emotion: Stressed
+40. Title: "Breathe Me", Artist: Sia, Genre: Pop, Emotion: Stressed
+41. Title: "Somebody That I Used to Know", Artist: Gotye ft. Kimbra, Genre: Pop, Emotion: Stressed
+42. Title: "Hall of Fame", Artist: The Script ft. will.i.am, Genre: Pop, Emotion: Hopeful
+43. Title: "Firework", Artist: Katy Perry, Genre: Pop, Emotion: Hopeful
+44. Title: "Brave", Artist: Sara Bareilles, Genre: Pop, Emotion: Hopeful
+45. Title: "The Climb", Artist: Miley Cyrus, Genre: Pop, Emotion: Hopeful
+46. Title: "You Raise Me Up", Artist: Josh Groban, Genre: Pop, Emotion: Hopeful
+47. Title: "Rise Up", Artist: Andra Day, Genre: Pop, Emotion: Hopeful
+48. Title: "I Will Always Love You", Artist: Whitney Houston, Genre: Pop, Emotion: Love
+49. Title: "Love Story", Artist: Taylor Swift, Genre: Pop, Emotion: Love
+50. Title: "Perfect", Artist: Ed Sheeran, Genre: Pop, Emotion: Love
+51. Title: "Can't Help Falling in Love", Artist: Elvis Presley, Genre: Pop, Emotion: Love
+52. Title: "Unchained Melody", Artist: The Righteous Brothers, Genre: Pop, Emotion: Love
+53. Title: "Everything", Artist: Michael Bubl , Genre: Pop, Emotion: Love
+54. Title: "You Are the Sunshine of My Life", Artist: Stevie Wonder, Genre: Pop, Emotion: Love
+55. Title: "Love Me Like You Do", Artist: Ellie Goulding, Genre: Pop, Emotion: Love
+56. Title: "Problem", Artist: Ariana Grande ft. Iggy Azalea, Genre: Pop, Emotion: Angry
+57. Title: "Irreplaceable", Artist: Beyonc , Genre: Pop, Emotion: Angry
+58. Title: "Love Song", Artist: Sara Bareilles, Genre: Pop, Emotion: Angry
+59. Title: "F**kin' Perfect", Artist: P!nk, Genre: Pop, Emotion: Angry
+60. Title: "Lazy Song", Artist: Bruno Mars, Genre: Pop, Emotion: Bored
+61. Title: "Blank Space", Artist: Taylor Swift, Genre: Pop, Emotion: Bored
+62. Title: "Bored", Artist: Billie Eilish, Genre: Pop, Emotion: Bored
+63. Title: "Boredom", Artist: Tyler, The Creator ft. Rex Orange County & Anna of the North, Genre: Pop, Emotion: Bored
+64. Title: "Don't Let Me Get Me", Artist: P!nk, Genre: Pop, Emotion: Bored
+65. Title: "Video Games", Artist: Lana Del Rey, Genre: Pop, Emotion: Bored
+66. Title: "Bored in the USA", Artist: Father John Misty, Genre: Pop, Emotion: Bored
+67. Title: "Bored to Tears", Artist: Black Label Society, Genre: Pop Rock, Emotion: Bored
+68. Title: "Confident", Artist: Demi Lovato, Genre: Pop, Emotion: Confident
+69. Title: "Sorry Not Sorry", Artist: Demi Lovato, Genre: Pop, Emotion: Confident
+70. Title: "Born This Way", Artist: Lady Gaga, Genre: Pop, Emotion: Confident
+71. Title: "Firework", Artist: Katy Perry, Genre: Pop, Emotion: Confident
+72. Title: "Unstoppable", Artist: Sia, Genre: Pop, Emotion: Confident
+73. Title: "Run the World (Girls)", Artist: Beyonc , Genre: Pop, Emotion: Confident
+74. Title: "Somebody That I Used to Know", Artist: Gotye ft. Kimbra, Genre: Pop, Emotion: Curious
+75. Title: "Chandelier", Artist: Sia, Genre: Pop, Emotion: Curious
+76. Title: "Elastic Heart", Artist: Sia, Genre: Pop, Emotion: Curious
+77. Title: "Stressed Out", Artist: twenty one pilots, Genre: Pop, Emotion: Curious
+78. Title: "Castle on the Hill", Artist: Ed Sheeran, Genre: Pop, Emotion: Curious
+79. Title: "Disturbia", Artist: Rihanna, Genre: Pop, Emotion: Fear
+80. Title: "Thriller", Artist: Michael Jackson, Genre: Pop, Emotion: Fear
+81. Title: "Bad Guy", Artist: Billie Eilish, Genre: Pop, Emotion: Fear
+82. Title: "Somebody's Watching Me", Artist: Rockwell, Genre: Pop, Emotion: Fear
+83. Title: "Heathens", Artist: twenty one pilots, Genre: Pop, Emotion: Fear
+84. Title: "Sweet Dreams (Are Made of This)", Artist: Eurythmics, Genre: Pop, Emotion: Fear
+85. Title: "Ghostbusters", Artist: Ray Parker Jr., Genre: Pop, Emotion: Fear
+86. Title: "Chicken Fried", Artist: Zac Brown Band, Genre: Country, Emotion: Happy
+87. Title: "Wagon Wheel", Artist: Darius Rucker, Genre: Country, Emotion: Happy
+88. Title: "Boondocks", Artist: Little Big Town, Genre: Country, Emotion: Happy
+89. Title: "Life Is a Highway", Artist: Rascal Flatts, Genre: Country, Emotion: Happy
+90. Title: "Dirt Road Anthem", Artist: Jason Aldean, Genre: Country, Emotion: Happy
+91. Title: "Whiskey Lullaby", Artist: Brad Paisley ft. Alison Krauss, Genre: Country, Emotion: Sad
+92. Title: "The Dance", Artist: Garth Brooks, Genre: Country, Emotion: Sad
+93. Title: "If Tomorrow Never Comes", Artist: Garth Brooks, Genre: Country, Emotion: Sad
+94. Title: "She's Everything", Artist: Brad Paisley, Genre: Country, Emotion: Sad
+95. Title: "Country Girl (Shake It for Me)", Artist: Luke Bryan, Genre: Country, Emotion: Energized
+96. Title: "Save a Horse (Ride a Cowboy)", Artist: Big & Rich, Genre: Country, Emotion: Energized
+97. Title: "Chattahoochee", Artist: Alan Jackson, Genre: Country, Emotion: Energized
+98. Title: "Redneck Woman", Artist: Gretchen Wilson, Genre: Country, Emotion: Energized
+99. Title: "Dirt on My Boots", Artist: Jon Pardi, Genre: Country, Emotion: Energized
+100. Title: "Breathe", Artist: Faith Hill, Genre: Country, Emotion: Calm
+101. Title: "Humble and Kind", Artist: Tim McGraw, Genre: Country, Emotion: Calm
+102. Title: "You're Gonna Miss This", Artist: Trace Adkins, Genre: Country, Emotion: Calm
+103. Title: "The House That Built Me", Artist: Miranda Lambert, Genre: Country, Emotion: Calm
+104. Title: "What Hurts the Most", Artist: Rascal Flatts, Genre: Country, Emotion: Calm
+105. Title: "My Wish", Artist: Rascal Flatts, Genre: Country, Emotion: Motivated
+106. Title: "Born to Fly", Artist: Sara Evans, Genre: Country, Emotion: Motivated
+107. Title: "Life Is a Highway", Artist: Tom Cochrane (covered by Rascal Flatts), Genre: Country, Emotion: Motivated
+108. Title: "Fighter", Artist: Keith Urban, Genre: Country, Emotion: Motivated
+109. Title: "The Champion", Artist: Carrie Underwood ft. Ludacris, Genre: Country, Emotion: Motivated
+110. Title: "Whiskey and You", Artist: Chris Stapleton, Genre: Country, Emotion: Lonely
+111. Title: "Tin Man", Artist: Miranda Lambert, Genre: Country, Emotion: Lonely
+112. Title: "Don't Take the Girl", Artist: Tim McGraw, Genre: Country, Emotion: Lonely
+113. Title: "She Used to Be Mine", Artist: Brooks & Dunn, Genre: Country, Emotion: Lonely
+114. Title: "Gunpowder & Lead", Artist: Miranda Lambert, Genre: Country, Emotion: Stressed
+115. Title: "Drunk on a Plane", Artist: Dierks Bentley, Genre: Country, Emotion: Stressed
+116. Title: "I Hope You Dance", Artist: Lee Ann Womack, Genre: Country, Emotion: Hopeful
+117. Title: "Pray for You", Artist: Jaron and the Long Road to Love, Genre: Country, Emotion: Hopeful
+118. Title: "I Can Only Imagine", Artist: MercyMe, Genre: Country, Emotion: Hopeful
+119. Title: "Highway Don't Care", Artist: Tim McGraw ft. Taylor Swift, Genre: Country, Emotion: Hopeful
+120. Title: "My Front Porch Looking In", Artist: Lonestar, Genre: Country, Emotion: Hopeful
+121. Title: "Die a Happy Man", Artist: Thomas Rhett, Genre: Country, Emotion: Love
+122. Title: "Forever and Ever, Amen", Artist: Randy Travis, Genre: Country, Emotion: Love
+123. Title: "From the Ground Up", Artist: Dan + Shay, Genre: Country, Emotion: Love
+124. Title: "It's Your Love", Artist: Tim McGraw & Faith Hill, Genre: Country, Emotion: Love
+125. Title: "You're Still the One", Artist: Shania Twain, Genre: Country, Emotion: Love
+126. Title: "Before He Cheats", Artist: Carrie Underwood, Genre: Country, Emotion: Angry
+127. Title: "Gunpowder & Lead", Artist: Miranda Lambert, Genre: Country, Emotion: Angry
+128. Title: "Goodbye Earl", Artist: Dixie Chicks, Genre: Country, Emotion: Angry
+129. Title: "These Boots Are Made for Walkin'", Artist: Nancy Sinatra (covered by Jessica Simpson), Genre: Country, Emotion: Angry
+130. Title: "Tequila Makes Her Clothes Fall Off", Artist: Joe Nichols, Genre: Country, Emotion: Bored
+131. Title: "Watermelon Crawl", Artist: Tracy Byrd, Genre: Country, Emotion: Bored
+132. Title: "Red Solo Cup", Artist: Toby Keith, Genre: Country, Emotion: Bored
+133. Title: "Hicktown", Artist: Jason Aldean, Genre: Country, Emotion: Bored
+134. Title: "Live Like You Were Dying", Artist: Tim McGraw, Genre: Country, Emotion: Confident
+135. Title: "That's My Kind of Night", Artist: Luke Bryan, Genre: Country, Emotion: Confident
+136. Title: "My Church", Artist: Maren Morris, Genre: Country, Emotion: Confident
+137. Title: "Small Town USA", Artist: Justin Moore, Genre: Country, Emotion: Confident
+138. Title: "Hell Yeah", Artist: Montgomery Gentry, Genre: Country, Emotion: Confident
+139. Title: "Who Were You Thinkin' 'Bout", Artist: Texas Tornados, Genre: Country, Emotion: Curious
+140. Title: "Johnny Cash", Artist: Jason Aldean, Genre: Country, Emotion: Curious
+141. Title: "The Night the Lights Went Out in Georgia", Artist: Reba McEntire, Genre: Country, Emotion: Fear
+142. Title: "The Thunder Rolls", Artist: Garth Brooks, Genre: Country, Emotion: Fear
+143. Title: "Ghost Riders in the Sky", Artist: Johnny Cash, Genre: Country, Emotion: Fear
+144. Title: "Alyssa Lies", Artist: Jason Michael Carroll, Genre: Country, Emotion: Fear
+145. Title: "I Want to Hold Your Hand", Artist: The Beatles, Genre: Rock, Emotion: Happy
+146. Title: "Sweet Child o' Mine", Artist: Guns N' Roses, Genre: Rock, Emotion: Happy
+147. Title: "Livin' on a Prayer", Artist: Bon Jovi, Genre: Rock, Emotion: Happy
+148. Title: "Walking on Sunshine", Artist: Katrina and the Waves, Genre: Rock, Emotion: Happy
+149. Title: "November Rain", Artist: Guns N' Roses, Genre: Rock, Emotion: Sad
+150. Title: "Everybody Hurts", Artist: R.E.M., Genre: Rock, Emotion: Sad
+151. Title: "Black", Artist: Pearl Jam, Genre: Rock, Emotion: Sad
+152. Title: "The Sound of Silence", Artist: Simon & Garfunkel, Genre: Rock, Emotion: Sad
+153. Title: "Jump", Artist: Van Halen, Genre: Rock, Emotion: Energized
+154. Title: "Wish You Were Here", Artist: Pink Floyd, Genre: Rock, Emotion: Calm
+155. Title: "Blackbird", Artist: The Beatles, Genre: Rock, Emotion: Calm
+156. Title: "Landslide", Artist: Fleetwood Mac, Genre: Rock, Emotion: Calm
+157. Title: "Patience", Artist: Guns N' Roses, Genre: Rock, Emotion: Calm
+158. Title: "Into the Mystic", Artist: Van Morrison, Genre: Rock, Emotion: Calm
+159. Title: "Eye of the Tiger", Artist: Survivor, Genre: Rock, Emotion: Motivated
+160. Title: "We Will Rock You", Artist: Queen, Genre: Rock, Emotion: Motivated
+161. Title: "The Final Countdown", Artist: Europe, Genre: Rock, Emotion: Motivated
+162. Title: "Yesterday", Artist: The Beatles, Genre: Rock, Emotion: Lonely
+163. Title: "Hurt", Artist: Johnny Cash (originally by Nine Inch Nails), Genre: Rock, Emotion: Lonely
+164. Title: "Boulevard of Broken Dreams", Artist: Green Day, Genre: Rock, Emotion: Lonely
+165. Title: "Behind Blue Eyes", Artist: The Who, Genre: Rock, Emotion: Lonely 
+166. Title: "Under Pressure", Artist: Queen & David Bowie, Genre: Rock, Emotion: Stressed
+167. Title: "Crawling", Artist: Linkin Park, Genre: Rock, Emotion: Stressed
+168. Title: "Chop Suey!", Artist: System of a Down, Genre: Rock, Emotion: Stressed
+169. Title: "Numb", Artist: Linkin Park, Genre: Rock, Emotion: Stressed
+170. Title: "Bulls on Parade", Artist: Rage Against the Machine, Genre: Rock, Emotion: Stressed
+171. Title: "So Cold", Artist: Breaking Benjamin, Genre: Rock, Emotion: Stressed
+172. Title: "Don't Stop Believin'", Artist: Journey, Genre: Rock, Emotion: Hopeful
+173. Title: "You're Gonna Go Far, Kid", Artist: The Offspring, Genre: Rock, Emotion: Hopeful
+174. Title: "Here Comes the Sun", Artist: The Beatles, Genre: Rock, Emotion: Hopeful
+175. Title: "Wonderful Tonight", Artist: Eric Clapton, Genre: Rock, Emotion: Love
+176. Title: "I Don't Want to Miss a Thing", Artist: Aerosmith, Genre: Rock, Emotion: Love
+177. Title: "More Than Words", Artist: Extreme, Genre: Rock, Emotion: Love
+178. Title: "Break Stuff", Artist: Limp Bizkit, Genre: Rock, Emotion: Angry
+179. Title: "Killing in the Name", Artist: Rage Against the Machine, Genre: Rock, Emotion: Angry
+180. Title: "Down with the Sickness", Artist: Disturbed, Genre: Rock, Emotion: Angry
+181. Title: "Falling Away from Me", Artist: Korn, Genre: Rock, Emotion: Angry
+182. Title: "You Oughta Know", Artist: Alanis Morissette, Genre: Rock, Emotion: Angry
+183. Title: "Stairway to Heaven", Artist: Led Zeppelin, Genre: Rock, Emotion: Bored
+184. Title: "Hotel California", Artist: Eagles, Genre: Rock, Emotion: Bored
+185. Title: "Free Bird", Artist: Lynyrd Skynyrd, Genre: Rock, Emotion: Bored
+186. Title: "Comfortably Numb", Artist: Pink Floyd, Genre: Rock, Emotion: Bored
+187. Title: "Thunderstruck", Artist: AC/DC, Genre: Rock, Emotion: Confident
+188. Title: "Bohemian Rhapsody", Artist: Queen, Genre: Rock, Emotion: Curious
+189. Title: "Hotel California", Artist: Eagles, Genre: Rock, Emotion: Curious
+190. Title: "Another Brick in the Wall (Part II)", Artist: Pink Floyd, Genre: Rock, Emotion: Curious
+191. Title: "Welcome to the Jungle", Artist: Guns N' Roses, Genre: Rock, Emotion: Fear
+192. Title: "Sympathy for the Devil", Artist: The Rolling Stones, Genre: Rock, Emotion: Fear
+193. Title: "Enter Sandman", Artist: Metallica, Genre: Rock, Emotion: Fear
+194. Title: "Black Sabbath", Artist: Black Sabbath, Genre: Rock, Emotion: Fear
+195. Title: "Spring" from "The Four Seasons", Artist: Antonio Vivaldi, Genre: Classical, Emotion: Happy
+196. Title: "Eine kleine Nachtmusik (A Little Night Music)", Artist: Wolfgang Amadeus Mozart, Genre: Classical, Emotion: Happy
+197. Title: "Radetzky March", Artist: Johann Strauss Sr., Genre: Classical, Emotion: Happy
+198. Title: "Overture to William Tell", Artist: Gioachino Rossini, Genre: Classical, Emotion: Happy
+199. Title: "The Blue Danube", Artist: Johann Strauss II, Genre: Classical, Emotion: Happy
+200. Title: "Adagio for Strings", Artist: Samuel Barber, Genre: Classical, Emotion: Sad
+201. Title: "Moonlight Sonata", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Sad
+202. Title: "Adagio in G Minor", Artist: Tomaso Albinoni, Genre: Classical, Emotion: Sad
+203. Title: "Symphony No. 3 in F major", Artist: Johannes Brahms, Genre: Classical, Emotion: Sad
+204. Title: "Pavane pour une infante d funte", Artist: Maurice Ravel, Genre: Classical, Emotion: Sad
+205. Title: "Symphony No. 5 in C minor", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Energized
+206. Title: "1812 Overture", Artist: Pyotr Ilyich Tchaikovsky, Genre: Classical, Emotion: Energized
+207. Title: "Symphony No. 9 in D minor, Op. 125", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Energized
+208. Title: "Carmen Suite No. 1", Artist: Georges Bizet, Genre: Classical, Emotion: Energized
+209. Title: "Symphony No. 40 in G minor", Artist: Wolfgang Amadeus Mozart, Genre: Classical, Emotion: Energized
+210. Title: "Clair de Lune", Artist: Claude Debussy, Genre: Classical, Emotion: Calm
+211. Title: "Gymnop dies", Artist: Erik Satie, Genre: Classical, Emotion: Calm
+212. Title: "Nocturne in E-flat major, Op. 9, No. 2", Artist: Fr d ric Chopin, Genre: Classical, Emotion: Calm
+213. Title: "The Swan (Le Cygne)", Artist: Camille Saint-Sa ns, Genre: Classical, Emotion: Calm
+214. Title: "Air on the G String", Artist: Johann Sebastian Bach, Genre: Classical, Emotion: Calm
+215. Title: "Ride of the Valkyries", Artist: Richard Wagner, Genre: Classical, Emotion: Motivated
+216. Title: "Symphony No. 7 in A major", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Motivated
+217. Title: "Symphony No. 6 in F major, Op. 68", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Motivated
+218. Title: "Symphony No. 1 in C minor, Op. 68", Artist: Johannes Brahms, Genre: Classical, Emotion: Motivated
+219. Title: "Symphony No. 4 in E minor, Op. 98", Artist: Johannes Brahms, Genre: Classical, Emotion: Motivated
+220. Title: "Adagio in G minor", Artist: Tomaso Albinoni, Genre: Classical, Emotion: Lonely
+221. Title: "Symphony No. 6 in B minor, Op. 74", Artist: Pyotr Ilyich Tchaikovsky, Genre: Classical, Emotion: Lonely
+222. Title: "Moonlight Sonata", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Lonely
+223. Title: "Piano Concerto No. 2 in C minor, Op. 18", Artist: Sergei Rachmaninoff, Genre: Classical, Emotion: Lonely
+224. Title: "Symphony No. 4 in G major", Artist: Gustav Mahler, Genre: Classical, Emotion: Lonely
+225. Title: "Toccata and Fugue in D minor, BWV 565", Artist: Johann Sebastian Bach, Genre: Classical, Emotion: Stressed
+226. Title: "Symphony No. 7 in A major, Op. 92", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Stressed
+227. Title: "Symphony No. 25 in G minor, K. 183", Artist: Wolfgang Amadeus Mozart, Genre: Classical, Emotion: Stressed
+228. Title: "Mars, the Bringer of War" from "The Planets", Artist: Gustav Holst, Genre: Classical, Emotion: Stressed
+229. Title: "Symphony No. 6 in F major, Op. 68", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Stressed
+230. Title: "Ode to Joy" from Symphony No. 9, Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Hopeful
+231. Title: "Pavane, Op. 50", Artist: Gabriel Faur , Genre: Classical, Emotion: Hopeful
+232. Title: "Symphony No. 9 in E minor, Op. 95", Artist: Anton n Dvor k, Genre: Classical, Emotion: Hopeful
+233. Title: "Jupiter, the Bringer of Jollity" from "The Planets", Artist: Gustav Holst, Genre: Classical, Emotion: Hopeful
+234. Title: "Symphony No. 9 in C major, D. 944", Artist: Franz Schubert, Genre: Classical, Emotion: Hopeful
+235. Title: "Clair de Lune", Artist: Claude Debussy, Genre: Classical, Emotion: Love
+236. Title: "Liebestr ume No. 3", Artist: Franz Liszt, Genre: Classical, Emotion: Love
+237. Title: "Adagio for Strings", Artist: Samuel Barber, Genre: Classical, Emotion: Love
+238. Title: "Romeo and Juliet Fantasy Overture", Artist: Pyotr Ilyich Tchaikovsky, Genre: Classical, Emotion: Love
+239. Title: "Ave Maria", Artist: Franz Schubert, Genre: Classical, Emotion: Love
+240. Title: "Symphony No. 5 in C minor, Op. 67", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Angry
+241. Title: "Symphony No. 7 in A major, Op. 92", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Angry
+242. Title: "Mars, the Bringer of War" from "The Planets", Artist: Gustav Holst, Genre: Classical, Emotion: Angry
+243. Title: "In the Hall of the Mountain King" from "Peer Gynt Suite No. 1", Artist: Edvard Grieg, Genre: Classical, Emotion: Angry
+244. Title: "Dies Irae" from "Requiem Mass in D minor", Artist: Wolfgang Amadeus Mozart, Genre: Classical, Emotion: Angry
+245. Title: "Gnossienne No. 1", Artist: Erik Satie, Genre: Classical, Emotion: Bored
+246. Title: "Gymnop die No. 1", Artist: Erik Satie, Genre: Classical, Emotion: Bored
+247. Title: "String Quartet No. 62 in C major, Op. 76, No. 3", Artist: Franz Joseph Haydn, Genre: Classical, Emotion: Bored
+248. Title: "Pavane pour une infante d funte", Artist: Maurice Ravel, Genre: Classical, Emotion: Bored
+249. Title: "Serenade for Strings in C major, Op. 48", Artist: Pyotr Ilyich Tchaikovsky, Genre: Classical, Emotion: Bored
+250. Title: "Symphony No. 5 in C minor, Op. 67", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Confident
+251. Title: "Symphony No. 9 in D minor, Op. 125", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Confident
+252. Title: "Piano Concerto No. 2 in C minor, Op. 18", Artist: Sergei Rachmaninoff, Genre: Classical, Emotion: Confident
+253. Title: "Overture to The Marriage of Figaro", Artist: Wolfgang Amadeus Mozart, Genre: Classical, Emotion: Confident
+254. Title: "Carmen Suite No. 1", Artist: Georges Bizet, Genre: Classical, Emotion: Confident
+255. Title: "The Four Seasons", Artist: Antonio Vivaldi, Genre: Classical, Emotion: Curious
+256. Title: "The Planets", Artist: Gustav Holst, Genre: Classical, Emotion: Curious
+257. Title: "Symphony No. 9 in E minor, Op. 95", Artist: Anton n Dvor k, Genre: Classical, Emotion: Curious
+258. Title: "Symphony No. 6 in F major, Op. 68", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Curious
+259. Title: "Danse Macabre", Artist: Camille Saint-Sa ns, Genre: Classical, Emotion: Curious
+260. Title: "Symphony No. 6 in B minor, Op. 74", Artist: Pyotr Ilyich Tchaikovsky, Genre: Classical, Emotion: Fear
+261. Title: "Night on Bald Mountain", Artist: Modest Mussorgsky, Genre: Classical, Emotion: Fear
+262. Title: "Symphony No. 5 in C minor, Op. 67", Artist: Ludwig van Beethoven, Genre: Classical, Emotion: Fear
+263. Title: "Symphony No. 4 in D minor, Op. 120", Artist: Robert Schumann, Genre: Classical, Emotion: Fear
+264. Title: "Toccata and Fugue in D minor, BWV 565", Artist: Johann Sebastian Bach, Genre: Classical, Emotion: Fear
+265. Title: "September", Artist: Earth, Wind & Fire, Genre: R&B, Emotion: Happy
+266. Title: "I Wanna Dance with Somebody (Who Loves Me)", Artist: Whitney Houston, Genre: R&B, Emotion: Happy
+267. Title: "Supermarket Flowers", Artist: Ed Sheeran, Genre: R&B, Emotion: Sad
+268. Title: "Halo", Artist: Beyonc , Genre: R&B, Emotion: Sad
+269. Title: "Someone Like You", Artist: Adele, Genre: R&B, Emotion: Sad
+270. Title: "Stay With Me", Artist: Sam Smith, Genre: R&B, Emotion: Sad
+271. Title: "Don't Stop 'Til You Get Enough", Artist: Michael Jackson, Genre: R&B, Emotion: Energized
+272. Title: "Crazy in Love", Artist: Beyonc  ft. Jay-Z, Genre: R&B, Emotion: Energized
+273. Title: "Work It", Artist: Missy Elliott, Genre: R&B, Emotion: Energized
+274. Title: "Yeah!", Artist: Usher ft. Lil Jon & Ludacris, Genre: R&B, Emotion: Energized
+275. Title: "Run the World (Girls)", Artist: Beyonc , Genre: R&B, Emotion: Energized
+276. Title: "Adorn", Artist: Miguel, Genre: R&B, Emotion: Calm
+277. Title: "Lay Me Down", Artist: Sam Smith, Genre: R&B, Emotion: Calm
+278. Title: "Best Part", Artist: H.E.R. ft. Daniel Caesar, Genre: R&B, Emotion: Calm
+279. Title: "I Will Always Love You", Artist: Whitney Houston, Genre: R&B, Emotion: Calm
+280. Title: "Survivor", Artist: Destiny's Child, Genre: R&B, Emotion: Motivated
+281. Title: "Fighter", Artist: Christina Aguilera, Genre: R&B, Emotion: Motivated
+282. Title: "Un-break My Heart", Artist: Toni Braxton, Genre: R&B, Emotion: Lonely
+283. Title: "Creep", Artist: TLC, Genre: R&B, Emotion: Lonely
+284. Title: "Stay", Artist: Rihanna ft. Mikky Ekko, Genre: R&B, Emotion: Lonely
+285. Title: "I Can't Make You Love Me", Artist: Bonnie Raitt, Genre: R&B, Emotion: Stressed
+286. Title: "Bleeding Love", Artist: Leona Lewis, Genre: R&B, Emotion: Stressed
+287. Title: "Love on the Brain", Artist: Rihanna, Genre: R&B, Emotion: Stressed
+288. Title: "Sorry", Artist: Beyonc , Genre: R&B, Emotion: Stressed
+289. Title: "Irreplaceable", Artist: Beyonc , Genre: R&B, Emotion: Stressed
+290. Title: "Hit the Road Jack", Artist: Ray Charles, Genre: R&B, Emotion: Stressed
+291. Title: "A Change Is Gonna Come", Artist: Sam Cooke, Genre: R&B, Emotion: Hopeful
+292. Title: "Ain't No Mountain High Enough", Artist: Marvin Gaye & Tammi Terrell, Genre: R&B, Emotion: Hopeful
+293. Title: "Beautiful", Artist: Christina Aguilera, Genre: R&B, Emotion: Hopeful
+294. Title: "Rise Up", Artist: Andra Day, Genre: R&B, Emotion: Hopeful
+295. Title: "Endless Love", Artist: Diana Ross & Lionel Richie, Genre: R&B, Emotion: Love
+296. Title: "Adorn", Artist: Miguel, Genre: R&B, Emotion: Love
+297. Title: "Crazy in Love", Artist: Beyonc  ft. Jay-Z, Genre: R&B, Emotion: Love
+298. Title: "I Will Always Love You", Artist: Whitney Houston, Genre: R&B, Emotion: Love
+299. Title: "Irreplaceable", Artist: Beyonc , Genre: R&B, Emotion: Angry
+300. Title: "No Scrubs", Artist: TLC, Genre: R&B, Emotion: Angry
+301. Title: "Break Up with Your Girlfriend, I'm Bored", Artist: Ariana Grande, Genre: R&B, Emotion: Angry
+302. Title: "Ex-Factor", Artist: Lauryn Hill, Genre: R&B, Emotion: Angry
+303. Title: "Don't Speak", Artist: No Doubt, Genre: R&B, Emotion: Bored
+304. Title: "Let Her Go", Artist: Passenger, Genre: R&B, Emotion: Bored
+305. Title: "Wicked Game", Artist: Chris Isaak, Genre: R&B, Emotion: Bored
+306. Title: "Independent Women, Pt. I", Artist: Destiny's Child, Genre: R&B, Emotion: Confident
+307. Title: "Formation", Artist: Beyonc , Genre: R&B, Emotion: Confident
+308. Title: "Sorry Not Sorry", Artist: Demi Lovato, Genre: R&B, Emotion: Confident
+309. Title: "Boss", Artist: Fifth Harmony, Genre: R&B, Emotion: Confident
+310. Title: "Mystery of Love", Artist: Sufjan Stevens, Genre: R&B, Emotion: Curious
+311. Title: "The Blower's Daughter", Artist: Damien Rice, Genre: R&B, Emotion: Curious
+312. Title: "Breathe Me", Artist: Sia, Genre: R&B, Emotion: Fear
+313. Title: "Gloomy Sunday", Artist: Billie Holiday, Genre: R&B, Emotion: Fear
+314. Title: "I Got You (I Feel Good)", Artist: James Brown, Genre: Soul, Emotion: Happy
+315. Title: "Signed, Sealed, Delivered (I'm Yours)", Artist: Stevie Wonder, Genre: Soul, Emotion: Happy
+316. Title: "Ain't No Mountain High Enough", Artist: Marvin Gaye & Tammi Terrell, Genre: Soul, Emotion: Happy
+317. Title: "I Want You Back", Artist: The Jackson 5, Genre: Soul, Emotion: Happy
+318. Title: "I'd Rather Go Blind", Artist: Etta James, Genre: Soul, Emotion: Sad
+319. Title: "Me and Mrs. Jones", Artist: Billy Paul, Genre: Soul, Emotion: Sad
+320. Title: "Higher and Higher", Artist: Jackie Wilson, Genre: Soul, Emotion: Energized
+321. Title: "Dancing in the Street", Artist: Martha and the Vandellas, Genre: Soul, Emotion: Energized
+322. Title: "I Feel for You", Artist: Chaka Khan, Genre: Soul, Emotion: Energized
+323. Title: "Stand by Me", Artist: Ben E. King, Genre: Soul, Emotion: Calm
+324. Title: "Dock of the Bay", Artist: Otis Redding, Genre: Soul, Emotion: Calm
+325. Title: "Ain't No Stoppin' Us Now", Artist: McFadden & Whitehead, Genre: Soul, Emotion: Motivated
+326. Title: "I Will Survive", Artist: Gloria Gaynor, Genre: Soul, Emotion: Motivated
+327. Title: "I'm Every Woman", Artist: Chaka Khan, Genre: Soul, Emotion: Motivated
+328. Title: "Ain't No Sunshine", Artist: Bill Withers, Genre: Soul, Emotion: Lonely
+329. Title: "I'm So Lonesome I Could Cry", Artist: B.J. Thomas, Genre: Soul, Emotion: Lonely
+330. Title: "I Fall to Pieces", Artist: Patsy Cline, Genre: Soul, Emotion: Lonely
+331. Title: "Alone Again (Naturally)", Artist: Gilbert O'Sullivan, Genre: Soul, Emotion: Lonely
+332. Title: "Nobody Knows You When You're Down and Out", Artist: Bessie Smith, Genre: Soul, Emotion: Lonely
+333. Title: "Chain of Fools", Artist: Aretha Franklin, Genre: Soul, Emotion: Stressed
+334. Title: "Lean on Me", Artist: Bill Withers, Genre: Soul, Emotion: Hopeful
+335. Title: "Lovely Day", Artist: Bill Withers, Genre: Soul, Emotion: Hopeful
+336. Title: "Let's Stay Together", Artist: Al Green, Genre: Soul, Emotion: Love
+337. Title: "At Last", Artist: Etta James, Genre: Soul, Emotion: Love
+338. Title: "I'll Make Love to You", Artist: Boyz II Men, Genre: Soul, Emotion: Love
+339. Title: "Crazy Love", Artist: Van Morrison, Genre: Soul, Emotion: Love
+340. Title: "Let's Get It On", Artist: Marvin Gaye, Genre: Soul, Emotion: Sad
+341. Title: "Back to Black", Artist: Amy Winehouse, Genre: Soul, Emotion: Angry
+342. Title: "Papa Was a Rollin' Stone", Artist: The Temptations, Genre: Soul, Emotion: Angry
+343. Title: "I Heard It Through the Grapevine", Artist: Marvin Gaye, Genre: Soul, Emotion: Angry
+344. Title: "It's a Man's Man's Man's World", Artist: James Brown, Genre: Soul, Emotion: Angry
+345. Title: "What a Wonderful World", Artist: Louis Armstrong, Genre: Soul, Emotion: Bored
+346. Title: "Ain't Too Proud to Beg", Artist: The Temptations, Genre: Soul, Emotion: Bored
+347. Title: "Feeling Good", Artist: Nina Simone, Genre: Soul, Emotion: Bored
+348. Title: "Summertime", Artist: Ella Fitzgerald, Genre: Soul, Emotion: Bored
+349. Title: "Respect", Artist: Aretha Franklin, Genre: Soul, Emotion: Confident
+350. Title: "Superstition", Artist: Stevie Wonder, Genre: Soul, Emotion: Confident
+351. Title: "Proud Mary", Artist: Tina Turner, Genre: Soul, Emotion: Confident
+352. Title: "I Can't Get Next to You", Artist: The Temptations, Genre: Soul, Emotion: Curious
+353. Title: "What's Going On", Artist: Marvin Gaye, Genre: Soul, Emotion: Curious
+354. Title: "Inner City Blues (Make Me Wanna Holler)", Artist: Marvin Gaye, Genre: Soul, Emotion: Curious
+355. Title: "People Get Ready", Artist: Curtis Mayfield, Genre: Soul, Emotion: Curious
+356. Title: "Strange Fruit", Artist: Billie Holiday, Genre: Soul, Emotion: Fear
+357. Title: "Mississippi Goddam", Artist: Nina Simone, Genre: Soul, Emotion: Fear
+358. Title: "The Times They Are A-Changin'", Artist: Bob Dylan, Genre: Soul, Emotion: Fear
+359. Title: "People Get Ready", Artist: The Impressions, Genre: Soul, Emotion: Fear
+360. Title: "Good Life", Artist: Kanye West ft. T-Pain, Genre: HipHop, Emotion: Happy
+361. Title: "Juicy", Artist: The Notorious B.I.G., Genre: HipHop, Emotion: Happy
+362. Title: "Sunshine", Artist: Atmosphere, Genre: HipHop, Emotion: Happy
+363. Title: "Can't Hold Us", Artist: Macklemore & Ryan Lewis ft. Ray Dalton, Genre: HipHop, Emotion: Happy
+364. Title: "Stan", Artist: Eminem ft. Dido, Genre: HipHop, Emotion: Sad
+365. Title: "Sing About Me, I'm Dying of Thirst", Artist: Kendrick Lamar, Genre: HipHop, Emotion: Sad
+366. Title: "Lose Yourself", Artist: Eminem, Genre: HipHop, Emotion: Energized
+367. Title: "Power", Artist: Kanye West, Genre: HipHop, Emotion: Energized
+368. Title: "Sicko Mode", Artist: Travis Scott, Genre: HipHop, Emotion: Energized
+369. Title: "DNA.", Artist: Kendrick Lamar, Genre: HipHop, Emotion: Energized
+370. Title: "No Limit", Artist: G-Eazy ft. A$AP Rocky & Cardi B, Genre: HipHop, Emotion: Energized
+371. Title: "The Message", Artist: Nas, Genre: HipHop, Emotion: Calm
+372. Title: "Self Care", Artist: Mac Miller, Genre: HipHop, Emotion: Calm
+373. Title: "Started From the Bottom", Artist: Drake, Genre: HipHop, Emotion: Motivated
+374. Title: "Hustlin'", Artist: Rick Ross, Genre: HipHop, Emotion: Motivated
+375. Title: "Stronger", Artist: Kanye West, Genre: HipHop, Emotion: Motivated
+376. Title: "Ambitionz Az a Ridah", Artist: 2Pac, Genre: HipHop, Emotion: Motivated
+377. Title: "Can't Be Touched", Artist: Roy Jones Jr., Genre: HipHop, Emotion: Motivated
+378. Title: "One Mic", Artist: Nas, Genre: HipHop, Emotion: Lonely
+379. Title: "Yesterday", Artist: Atmosphere, Genre: HipHop, Emotion: Lonely
+380. Title: "I Feel Like That", Artist: Kanye West, Genre: HipHop, Emotion: Stressed
+381. Title: "The Way I Am", Artist: Eminem, Genre: HipHop, Emotion: Stressed
+382. Title: "XO TOUR Llif3", Artist: Lil Uzi Vert, Genre: HipHop, Emotion: Stressed
+383. Title: "Breathe", Artist: Fabolous, Genre: HipHop, Emotion: Stressed
+384. Title: "Alright", Artist: Kendrick Lamar, Genre: HipHop, Emotion: Hopeful
+385. Title: "One Love", Artist: Nas, Genre: HipHop, Emotion: Hopeful
+386. Title: "I Believe", Artist: T.I., Genre: HipHop, Emotion: Hopeful
+387. Title: "Keep Ya Head Up", Artist: 2Pac, Genre: HipHop, Emotion: Hopeful
+388. Title: "The Show Goes On", Artist: Lupe Fiasco, Genre: HipHop, Emotion: Hopeful
+389. Title: "I Need Love", Artist: LL Cool J, Genre: HipHop, Emotion: Love
+390. Title: "Ms. Jackson", Artist: OutKast, Genre: HipHop, Emotion: Love
+391. Title: "Crazy in Love", Artist: Beyonc  ft. Jay-Z, Genre: HipHop, Emotion: Love
+392. Title: "Best I Ever Had", Artist: Drake, Genre: HipHop, Emotion: Love
+393. Title: "Thugz Mansion", Artist: 2Pac ft. Nas, Genre: HipHop, Emotion: Love
+394. Title: "Hate Me Now", Artist: Nas ft. Puff Daddy, Genre: HipHop, Emotion: Angry
+395. Title: "Kim", Artist: Eminem, Genre: HipHop, Emotion: Angry
+396. Title: "Hit 'Em Up", Artist: 2Pac, Genre: HipHop, Emotion: Angry
+397. Title: "Fight the Power", Artist: Public Enemy, Genre: HipHop, Emotion: Angry
+398. Title: "Don't Like", Artist: Chief Keef ft. Lil Reese, Genre: HipHop, Emotion: Angry
+399. Title: "Boredom", Artist: Tyler, The Creator, Genre: HipHop, Emotion: Bored
+400. Title: "One Beer", Artist: MF DOOM, Genre: HipHop, Emotion: Bored
+401. Title: "Everybody Dies", Artist: J. Cole, Genre: HipHop, Emotion: Bored
+402. Title: "No Role Modelz", Artist: J. Cole, Genre: HipHop, Emotion: Bored
+403. Title: "Yonkers", Artist: Tyler, The Creator, Genre: HipHop, Emotion: Bored
+404. Title: "Lose Yourself", Artist: Eminem, Genre: HipHop, Emotion: Confident
+405. Title: "Big Pimpin'", Artist: JAY-Z ft. UGK, Genre: HipHop, Emotion: Confident
+406. Title: "HUMBLE.", Artist: Kendrick Lamar, Genre: HipHop, Emotion: Confident
+407. Title: "All I Do Is Win", Artist: DJ Khaled ft. T-Pain, Ludacris, Snoop Dogg, Rick Ross, Genre: HipHop, Emotion: Confident
+408. Title: "Lost Ones", Artist: J. Cole, Genre: HipHop, Emotion: Curious
+409. Title: "Murder on My Mind", Artist: YNW Melly, Genre: HipHop, Emotion: Curious
+410. Title: "Who Dat", Artist: J. Cole, Genre: HipHop, Emotion: Curious
+411. Title: "Mind Playing Tricks on Me", Artist: Geto Boys, Genre: HipHop, Emotion: Fear
+412. Title: "FDT", Artist: YG ft. Nipsey Hussle, Genre: HipHop, Emotion: Fear
+413. Title: "Changes", Artist: 2Pac, Genre: HipHop, Emotion: Fear
+414. Title: "One", Artist: Metallica ft. KRS-One, Genre: HipHop, Emotion: Fear

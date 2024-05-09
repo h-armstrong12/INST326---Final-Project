@@ -3,17 +3,22 @@
 import time
 import re
 import random
+import unittest
+
+#from finalprojectcode import Username
+
 #import emotions
 #import songlist
+
 def intro_username(username):
     """
     Docstring
     
     """
-    print("Hello " + username + ", welcome to (insert program name). A Emotion/Genre-Based Music Library Management and Recommendation System.")
+    print("Hello " + username + ", welcome to Audio Library. A Emotion/Genre-Based Music Library Management and Recommendation System.")
     time.sleep(1)
     print("\n")
-    print("""Here you will be able to select whether you would like to have a list of songs recommened to you based on a series of questions (recommend), 
+    print("""Here you will be able to get a recommened list of songs based on a series of questions (recommend), 
 be able to choose your genre of music and be given a list of songs (select), 
 be able to change the feelings associated with the songs in our textfile (alter), 
 and get a randomized list of songs from our text file (randomize).""")
@@ -63,19 +68,19 @@ def desiredlist(selection, username):
           Pop, Country, Rock, Classical, R&B, Soul, HipHop""")
     print("\n")
     musicprefer = input("Enter what genre of music you would like to listen to: ")
-    if musicprefer.casefold() == "Pop".casefold() or "Country".casefold() or "Rock".casefold() or "Classical".casefold() or "R&B".casefold() or "Soul".casefold() or "Hiphop".casefold():
+    if musicprefer.casefold() == "pop".casefold() or "country".casefold() or "rock".casefold() or "classical".casefold() or "r&b".casefold() or "soul".casefold() or "hiphop".casefold():
         file = open("songlist.txt", "r")
         content = file.readlines()
         for i in content:
-            discover = re.search(r"Genre: +([a-zA-Z]+)", i)
+            discover = re.search(r"Genre: ([a-zA-Z]\S[a-zA-Z]+)", i)
             if discover != None:
                 capture = discover.group(1)
             if capture.casefold() == musicprefer.casefold():
-                search = re.search(r"Title: +([a-zA-Z0-9]+.+, Genre:+ [a-zA-Z]+, [a-zA-Z]+: [a-zA-Z]+)", i)
+                search = re.search(r'Title: (["a-zA-Z0-9"]+.+)', i)
                 if search != None:
                     trial = search.group(1)
                     recommendlist.append(trial)
-        print(recommendlist)
+        print("\n".join(recommendlist))
         print(f"Here is your selection of music, {username} we hope you enjoy!")
         print("\n")
         emotionprefer = input("Would you like to search for songs in this list that are associated with a certain emotion (yes/no): ")
@@ -104,11 +109,12 @@ def desiredlist(selection, username):
                 #     if tracksemotion != None:
                 #         desiredsongemotion = tracksemotion.group(1)
                 #         desiredemotionlist.append(desiredsongemotion)
-            print(content)
+            print("\n".join(content))
             if len(content) == 0:
                 print(f"Sorry {username}, looks like there's no songs here which fit that description.")
-        if emotionprefer.lower() == "no":
-            quit() #code something in that will take the user back to the start.
+        if emotionprefer.lower() != "yes":
+            print(f"We hope you enjoy the list of songs, {username}") #code something in that will take the user back to the start.
+
     file.close()
     #offer users the chance to do over.
     cyclecontinue(selection, username)
@@ -127,7 +133,7 @@ def desiredlist(selection, username):
 
 
     
-def recommendation(username, selection):
+def recommendation(selection, username):
     """
     Docstring
     
@@ -138,6 +144,7 @@ def recommendation(username, selection):
     "Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Stressed",
     "Hopeful", "Love", "Angry", "Bored", "Confident", "Curious", "Fear"
           """)
+    print("\n")
     realrecommendlist = []
     emotionlist = ["happy", "sad", "energized", "calm", "motivated", "lonely", "stressed","hopeful", "love", "angry", "bored", "confident", "curious", "fear"]
     if emotion_select.casefold() in emotionlist:
@@ -154,9 +161,144 @@ def recommendation(username, selection):
                 if secondsearch != None:
                     newtrial = secondsearch.group(1)
                 realrecommendlist.append(newtrial)
-        print(realrecommendlist)
+        print("\n".join(realrecommendlist))
+        print("\n")
+    
     else:
         print("Did you mean to write something else? Why don't you try again:")
+        recommendation(selection, username)
+    
+    textfile.close()
+    
+    theme_option = input("Would you like to listen to songs with specific lyrical themes: (yes/no) ")
+    print("\n")
+    secondlist = []
+    thirdlist = []
+    if theme_option == "yes".casefold():
+        
+        print("Here's a list of themes: Romance, Empowerment, Peace, Heartbreak, Optimism ")
+        theme_select = input("Select a theme you would be interested in: ")
+        print("\n")
+        if theme_select == "romance".casefold() and emotion_select != "love".casefold():
+            textfile = open("songlist.txt", "r")
+            recommendcontent = textfile.readlines()
+            for i in recommendcontent:
+                secondfindemotion = re.search(r"Emotion: (Love)", i)
+                if secondfindemotion != None:
+                    secondemotion = secondfindemotion.group(1)
+                    if secondemotion.casefold() == "Love".casefold():
+                        tracksearch = re.search(r"(^.*)", i)
+                        if tracksearch != None:
+                            songtrial = tracksearch.group(1)
+                        secondlist.append(songtrial)       
+            print("\n".join(secondlist))
+            textfile.close()
+
+        if theme_select == "empowerment".casefold() and emotion_select != "motivated".casefold():
+            
+            textfile = open("songlist.txt", "r")
+            recommendcontent = textfile.readlines()
+            for i in recommendcontent:
+                thirdfindemotion = re.search(r"Emotion: (Motivated)", i)
+                if thirdfindemotion != None:
+                    thirdemotion = thirdfindemotion.group(1)
+                    if thirdemotion.casefold() == "Motivated".casefold():
+                        empowersongsearch = re.search(r"(^.*)", i)
+                        if empowersongsearch != None:
+                            songtrial = empowersongsearch.group(1)
+                        thirdlist.append(songtrial)       
+            print("\n".join(thirdlist))
+            textfile.close()
+
+        if theme_select == "peace".casefold() and emotion_select != "calm".casefold():
+            
+            textfile = open("songlist.txt", "r")
+            recommendcontent = textfile.readlines()
+            for i in recommendcontent:
+                thirdfindemotion = re.search(r"Emotion: (Calm)", i)
+                if thirdfindemotion != None:
+                    thirdemotion = thirdfindemotion.group(1)
+                    if thirdemotion.casefold() == "Calm".casefold():
+                        empowersongsearch = re.search(r"(^.*)", i)
+                        if empowersongsearch != None:
+                            songtrial = empowersongsearch.group(1)
+                        thirdlist.append(songtrial)       
+            print("\n".join(thirdlist))
+            textfile.close()
+
+        if theme_select == "heartbreak".casefold() and emotion_select != "sad".casefold():
+            
+            textfile = open("songlist.txt", "r")
+            recommendcontent = textfile.readlines()
+            for i in recommendcontent:
+                thirdfindemotion = re.search(r"Emotion: (Sad)", i)
+                if thirdfindemotion != None:
+                    thirdemotion = thirdfindemotion.group(1)
+                    if thirdemotion.casefold() == "Sad".casefold():
+                        empowersongsearch = re.search(r"(^.*)", i)
+                        if empowersongsearch != None:
+                            songtrial = empowersongsearch.group(1)
+                        thirdlist.append(songtrial)       
+            print("\n".join(thirdlist))
+            textfile.close()
+        
+        if theme_select == "optimism".casefold() and emotion_select != "hopeful".casefold():
+            
+            textfile = open("songlist.txt", "r")
+            recommendcontent = textfile.readlines()
+            for i in recommendcontent:
+                thirdfindemotion = re.search(r"Emotion: (Hopeful)", i)
+                if thirdfindemotion != None:
+                    thirdemotion = thirdfindemotion.group(1)
+                    if thirdemotion.casefold() == "Hopeful".casefold():
+                        empowersongsearch = re.search(r"(^.*)", i)
+                        if empowersongsearch != None:
+                            songtrial = empowersongsearch.group(1)
+                        thirdlist.append(songtrial)       
+            print("\n".join(thirdlist))
+            textfile.close()
+
+        else:
+            print("Looks like you already have these tracks in your first list.")
+            
+
+
+    thirdquestion = input("Are you in the mood for music that is fast-paced or slow: ")
+    print("\n")
+    if thirdquestion == "fast-paced".casefold() or "fast".casefold() or "fastpaced".casefold() and thirdquestion != "energized".casefold():
+        textfile = open("songlist.txt", "r")
+        recommendcontent = textfile.readlines()
+        for i in recommendcontent:
+            thirdfindemotion = re.search(r"Emotion: (Energized)", i)
+            if thirdfindemotion != None:
+                thirdemotion = thirdfindemotion.group(1)
+                if thirdemotion.casefold() == "Energized".casefold():
+                    empowersongsearch = re.search(r"(^.*)", i)
+                    if empowersongsearch != None:
+                        songtrial = empowersongsearch.group(1)
+                    thirdlist.append(songtrial)       
+        print("\n".join(thirdlist))
+        textfile.close()
+    if thirdquestion == "slow-paced".casefold() or "slow".casefold() or "slowpaced".casefold() and thirdquestion != "bored".casefold():
+        textfile = open("songlist.txt", "r")
+        recommendcontent = textfile.readlines()
+        for i in recommendcontent:
+            thirdfindemotion = re.search(r"Emotion: (Bored)", i)
+            if thirdfindemotion != None:
+                thirdemotion = thirdfindemotion.group(1)
+                if thirdemotion.casefold() == "Bored".casefold():
+                    empowersongsearch = re.search(r"(^.*)", i)
+                    if empowersongsearch != None:
+                        songtrial = empowersongsearch.group(1)
+                    thirdlist.append(songtrial)       
+        print("\n".join(thirdlist))
+        textfile.close()
+        print("\n")
+        print(f"Hope you enjoy this personalized recommendation list {username}")
+        print("\n")
+
+    cyclecontinue(selection, username)
+    
     
     
 
@@ -164,7 +306,7 @@ def recommendation(username, selection):
     #unit test: makes sure that the tracks match what the user wants.
     pass
 
-def altertracks(username, selection):
+def altertracks(selection, username):
     """
     Interactively allows a user to update the emotional tag associated with a track.
     Validates against a predefined list of acceptable emotions.
@@ -182,7 +324,7 @@ def altertracks(username, selection):
     file = open("songlist.txt", "r")
     content = file.readlines()
     for i in content:
-        tracknumber = re.search(r"([0-9]+):", i)
+        tracknumber = re.search(r"([0-9]+).", i)
         if tracknumber != None:
             capture = tracknumber.group(1)
         if capture == track_name:
@@ -212,9 +354,10 @@ def altertracks(username, selection):
         print(f"Invalid emotion. Available emotions are: {', '.join(valid_emotions)}.")
     
     if input("Modify another track? (yes/no): ").lower() == 'yes':
-        altertracks(username, selection)
+        altertracks(selection, username)
     else:
         print("Exiting track modification.")
+    cyclecontinue(selection, username)
 
 
 def randomize(selection, username):
@@ -229,9 +372,21 @@ def randomize(selection, username):
     listData = []
     listData = content.split("\n")
     #print(listData)
-    print(random.sample(listData, 10))
+    randomset = random.sample(listData, 10)
+    print("\n".join(randomset))
     #offer users the chance to do over.
     cyclecontinue(selection, username)
 
-    #unit test: test to make sure there is 10 random tracks from the list presented to the user.
+# class TestMethods(unittest.TestCase):
+#     #test for randomize
+#     def testrandomize(self):
+#         randomize("randomize", "Hannah")
+
+
+
+
+# if __name__ == '__main__':
+#     unittest.main()
+    
+#     #unit test: test to make sure there is 10 random tracks from the list presented to the user.
         
