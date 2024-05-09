@@ -19,3 +19,4 @@ them the chance to listen to other genres that may not be present in the recomme
 Will Not Do:
 ● Stream music or video content directly within the application.
 ● Integrate with external databases or APIs for content fetching.
+

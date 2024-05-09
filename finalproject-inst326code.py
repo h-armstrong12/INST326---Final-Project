@@ -10,13 +10,14 @@ happiness, motivation, relaxation) in people.
 import time
 import methodholder
 import re
+import unittest
 
 #username input
-
 username = input("Enter the name you would like to be adressed as: ")
 if username == "":
+    #raise value: make sure that the username is not empty, the user should input a name
+    raise ValueError("There is no name")
     print("Please enter a name, we weren't able to catch what you typed in")
-#unit test: make sure that the username is not empty, the user should input a name
 
 methodholder.intro_username(username)
 

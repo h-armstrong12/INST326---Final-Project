@@ -49,7 +49,7 @@ def decision(selection, username):
 def cyclecontinue(selection, username):
     time.sleep(2)
     print("\n")
-    print(f"Hi {username}, you have the choice to either quit the program ('EXIT'), or continue using the other features available.")
+    print("You have the choice to either quit the program ('EXIT'), or continue using the other features available.")
     selection = input("Would you like to use one of these features: 'recommend', 'randomize', 'alter', 'select': ")
     if selection.casefold == "EXIT".casefold:
         exit()
@@ -373,20 +373,10 @@ def randomize(selection, username):
     listData = content.split("\n")
     #print(listData)
     randomset = random.sample(listData, 10)
+    #just raises an error if there isn't enough songs here.
+    if len(randomset) != 10:
+        raise ValueError("There are not 10 songs in this list.")
     print("\n".join(randomset))
     #offer users the chance to do over.
     cyclecontinue(selection, username)
 
-# class TestMethods(unittest.TestCase):
-#     #test for randomize
-#     def testrandomize(self):
-#         randomize("randomize", "Hannah")
-
-
-
-
-# if __name__ == '__main__':
-#     unittest.main()
-    
-#     #unit test: test to make sure there is 10 random tracks from the list presented to the user.
-        
