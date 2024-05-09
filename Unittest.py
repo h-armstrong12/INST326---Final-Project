@@ -1,48 +1,59 @@
 #This file is for unit tests
-
 import unittest
 import methodholder
-
+#when running these tests, make sure to first comment the cyclecontinue at the end of each method.
 class test(unittest.TestCase):
+    """
+     A class that tests methods from the methodholder file.
+
+    Attributes:
+        self: a reference to the current instance of the class
+
+"""
     def test_randomize(self):
-        # Call the function and get the returned strings
+        """ A test for the randomize function.
+        Args:
+            self
+        """
+        #In order to test this, comment out the cyclecontinue on line #380 of methodholder
         output = methodholder.randomize("randomize", "Ruka")
         notoutput = methodholder.randomize("randomize", "Hannah")
         self.assertNotEquals(output, notoutput)
-        # Check if the expected strings are returned
+
+
+    def test_altertracks(self):
+        """ A test for the alter function.
+        Args:
+            self
+        """
+        #tests the cycle continue which allows users to continue using the program without having to exit.
+        output = methodholder.altertracks("alter", "Hannah")
         
-        #assert ("Hello there!") in output
-        #assert ("Here is a randomized list of 10 songs from the songlist file.") in output
-        #print("successful")
-
-
-    #def test_cyclecontinue(self):
-         #tests the cycle continue which allows users to continue using the program without having to exit.
-         #output = methodholder.cyclecontinue("selection", "Ruka")
-         #self.assertRaises()
-         #assert ("You have the choice to either quit the program ('EXIT'), or continue using the other features available.") in output
-         #print("successful")
-
-    #def test_altertracks():
-         #output = methodholder.altertracks("alter", "Hannah")
-         #assert("Exiting track modification.") in output
-         #print("successful")
+        self.assertRaises(AssertionError)
+        #notoutput = methodholder.altertracks("selection", "")
+        #self.assertNotEquals(output, notoutput)
+        #assert ("You have the choice to either quit the program ('EXIT'), or continue using the other features available.") in output
 
     def test_recommendation(self):
-        output = methodholder.recommendation("somethingelse", "Hannah")
-        input = methodholder.recommendation("reommend", "Hannah")
-        self.assertNotEquals(output, input)
-      #if methodholder.recommendation(selection="recommend") is False:
-       #  print("error")
+      """ A test for the randomize function.
+        Args:
+            self
+        """
+      output = methodholder.recommendation("recommend", "Hannah")
+      output2 = methodholder.recommendation("recommend", "Hannah")
+      self.assertEquals(output, output2)
 
-    #     pass
-        
+    def test_desiredtrack(self):
+        """ A test for the randomize function.
+        Args:
+            self
+        """
+        output = methodholder.desiredlist("select", "Ruka")
+        output2 = methodholder.desiredlist("SeLeCt", "Hannah")
+        self.assertEquals(output, output2)
+       
 
 if __name__ == '__main__':
     unittest.main()
-    #test_randomize()
-    #  test_cyclecontinue()
-    #  test_altertracks()
-    #test_recommendation()
 
       

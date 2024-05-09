@@ -1,18 +1,20 @@
-#Will hold the methods that the program will rely on.
-
+"""Methodholder file
+"""
 import time
 import re
 import random
 import unittest
 
-#from finalprojectcode import Username
 
-#import emotions
-#import songlist
 
 def intro_username(username):
-    """
-    Docstring
+    """Introduces the user to the audio library program
+
+    Args:
+        username (str): the name of the user.
+
+    Returns:
+        None
     
     """
     print("Hello " + username + ", welcome to Audio Library. A Emotion/Genre-Based Music Library Management and Recommendation System.")
@@ -30,6 +32,16 @@ and get a randomized list of songs from our text file (randomize).""")
     
 
 def decision(selection, username):
+    """Determines which method the user will go to based on their input.
+
+    Args: 
+        selection (str): the option (or method name) that the user has chosen.
+        username (str): the name of the user.
+
+    Returns:
+        None
+    
+    """
     if str(selection) == "select":
         desiredlist(selection, username)
     elif str(selection) == "recommend":
@@ -47,6 +59,16 @@ def decision(selection, username):
         print("We were unable to identify what you typed in. Why dont you try again?")
         
 def cyclecontinue(selection, username):
+    """Offers users the chance to select another option rather (less time consuming).
+
+    Args:
+        selection (str): the option (or method name) that the user has chosen.
+        username (str): the name of the user.
+
+    Returns:
+        None: Directly outputs results and prompts user for additional changes.
+
+    """
     time.sleep(2)
     print("\n")
     print("You have the choice to either quit the program ('EXIT'), or continue using the other features available.")
@@ -57,9 +79,15 @@ def cyclecontinue(selection, username):
         decision(selection, username)
 
 def desiredlist(selection, username):
-    """
-    Docstring
-    
+    """This is the select option where users choose their genre of music and then a emotion which filters a list of songs.
+
+    Args:
+        selection (str): the option (or method name) that the user has chosen.
+        username (str): the name of the user.
+
+    Returns:
+        None: Directly outputs results and prompts user for additional changes.
+
     """
     #all this code allows users to access their desired list of songs based on genre of music
     recommendlist = []
@@ -87,8 +115,7 @@ def desiredlist(selection, username):
         print("\n")
         if emotionprefer.lower() == "yes":
             content = []
-            #content = recommendlist
-            #desiredemotionlist = recommendlist
+           
             print("""List of emotions throughout the list: 
             "Happy", "Sad", "Energized", "Calm", "Motivated", "Lonely", "Stressed",
             "Hopeful", "Love", "Angry", "Bored", "Confident", "Curious", "Fear")""")
@@ -113,30 +140,22 @@ def desiredlist(selection, username):
             if len(content) == 0:
                 print(f"Sorry {username}, looks like there's no songs here which fit that description.")
         if emotionprefer.lower() != "yes":
-            print(f"We hope you enjoy the list of songs, {username}") #code something in that will take the user back to the start.
+            print(f"We hope you enjoy the list of songs, {username}")
 
     file.close()
-    #offer users the chance to do over.
+    #offer users the chance to do over (this applies to all cyclecontinue calls).
     cyclecontinue(selection, username)
-    #musicprefer: users will input the genre they would like to listen to (must be exactly as spelled)
-    #unit test: make sure that the name of the genre(s) are spelled correctly, or the program wont understand. 
-    #will ask user to input it again
-
-
-    #print("""Here are some common experiences/feelings felt through these songs: (list of emotions/feelings)""")
-    #emotionprefer = input("Within the genre(s) selected, what are you in the mood for?")
-    #emotionprefer: users will input the emotion they want to eperience (must be exactly as spelled)
-    #unit test: make sure that the name of the emotion(s)\desired experiences(s) are spelled correctly, or the program wont understand. 
-    #will ask user to input it again
-
-    # a list of songs that fit these descriptions (genre/experience) will be presented to the user.
-
-
+    
     
 def recommendation(selection, username):
-    """
-    Docstring
-    
+    """This is the recommendation option. Users can select their music based solely on emotion by answering a few questions.
+
+    Args:
+        selection (str): the option (or method name) that the user has chosen.
+        username (str): the name of the user.
+
+    Returns:
+        None: Directly outputs results and prompts user for additional changes.
     """
     print("Hello there!")
     time.sleep(1)
@@ -146,7 +165,9 @@ def recommendation(selection, username):
           """)
     print("\n")
     realrecommendlist = []
-    emotionlist = ["happy", "sad", "energized", "calm", "motivated", "lonely", "stressed","hopeful", "love", "angry", "bored", "confident", "curious", "fear"]
+    emotionlist = ["happy", "sad", "energized", "calm", "motivated", 
+                   "lonely", "stressed","hopeful", "love", "angry", 
+                   "bored", "confident", "curious", "fear"]
     if emotion_select.casefold() in emotionlist:
         #print("good job")
         textfile = open("songlist.txt", "r")
@@ -163,12 +184,11 @@ def recommendation(selection, username):
                 realrecommendlist.append(newtrial)
         print("\n".join(realrecommendlist))
         print("\n")
-    
+        textfile.close()
     else:
         print("Did you mean to write something else? Why don't you try again:")
-        recommendation(selection, username)
-    
-    textfile.close()
+        recommendation(selection, username)    
+
     
     theme_option = input("Would you like to listen to songs with specific lyrical themes: (yes/no) ")
     print("\n")
@@ -177,9 +197,11 @@ def recommendation(selection, username):
     if theme_option == "yes".casefold():
         
         print("Here's a list of themes: Romance, Empowerment, Peace, Heartbreak, Optimism ")
-        theme_select = input("Select a theme you would be interested in: ")
+        theme_select = input("Choose a theme you would be interested in: ")
         print("\n")
-        if theme_select == "romance".casefold() and emotion_select != "love".casefold():
+        #these five theme_select options all do the same thing, 
+        #but they dont work if their emotion equivalent ("Romance = Love") has already been chosen prior.
+        if theme_select.casefold() == "romance".casefold() and emotion_select != "love".casefold():
             textfile = open("songlist.txt", "r")
             recommendcontent = textfile.readlines()
             for i in recommendcontent:
@@ -262,7 +284,7 @@ def recommendation(selection, username):
             print("Looks like you already have these tracks in your first list.")
             
 
-
+    #third queston the recommended method asks
     thirdquestion = input("Are you in the mood for music that is fast-paced or slow: ")
     print("\n")
     if thirdquestion == "fast-paced".casefold() or "fast".casefold() or "fastpaced".casefold() and thirdquestion != "energized".casefold():
@@ -296,15 +318,14 @@ def recommendation(selection, username):
         print("\n")
         print(f"Hope you enjoy this personalized recommendation list {username}")
         print("\n")
+    else:
+        "We hope you enjoy your personalized list."
 
     cyclecontinue(selection, username)
     
     
     
 
-    
-    #unit test: makes sure that the tracks match what the user wants.
-    pass
 
 def altertracks(selection, username):
     """
@@ -312,14 +333,18 @@ def altertracks(selection, username):
     Validates against a predefined list of acceptable emotions.
     
     Parameters:
-    username (str): The name of the user.
+        username (str): The name of the user.
+        selection (str): The choice of the user (which option they'd like to use).
     
     Returns:
-    None: Directly outputs results and prompts user for additional changes.
+        None: Directly outputs results and prompts user for additional changes.
     """
    
-    print(f"Hello {username}, ready to update the emotional tags of your tracks.")
-    valid_emotions = ["happy", "sad", "energized", "calm", "motivated", "lonely", "stressed","hopeful", "love", "angry", "bored", "confident", "curious", "fear"]
+    print(f"Hello {username}, ready to update the emotional tags of your tracks?")
+    #list of emotions that the user can use besides the one already assigned (no other can be used).
+    valid_emotions = ["happy", "sad", "energized", "calm", 
+                      "motivated", "lonely", "stressed","hopeful", 
+                      "love", "angry", "bored", "confident", "curious", "fear"]
     track_name = input("Enter the track number to modify: ")
     file = open("songlist.txt", "r")
     content = file.readlines()
@@ -330,10 +355,11 @@ def altertracks(selection, username):
         if capture == track_name:
             wholetrack = re.search(r"(^.*)", i)
             with open("altersonglist.txt", "a+") as writefile:
-                #print(wholetrack.group(1))
                 writefile.write(wholetrack.group(1) + "\n") 
                         
     new_emotion = input(f"Enter new emotion from: {', '.join(valid_emotions)}: ")
+    if new_emotion not in valid_emotions:
+        raise ValueError("Enter an already existing emotion that is in the list.")
     if new_emotion in valid_emotions:
         print(f"Updated '{track_name}' with new emotion: {new_emotion}.")   
         with open("altersonglist.txt", "r") as file:
@@ -352,17 +378,25 @@ def altertracks(selection, username):
     
     else:
         print(f"Invalid emotion. Available emotions are: {', '.join(valid_emotions)}.")
-    
+    #allows the user to keep modifying other tracks.
     if input("Modify another track? (yes/no): ").lower() == 'yes':
         altertracks(selection, username)
     else:
         print("Exiting track modification.")
+    #comment the cyclecontinue out when running the tests on the Unittest file.
     cyclecontinue(selection, username)
 
 
 def randomize(selection, username):
-    """
-    Docstring
+    """Gives users a randomized list of 10 songs (random genre/emotion)
+    
+    Args:
+        username (str): The name of the user.
+        selection (str): The choice of the user (which option they'd like to use).
+
+    Returns:
+        None: Directly outputs results and prompts user for additional changes.
+    
     
     """
     print("Hello there!")
@@ -371,13 +405,14 @@ def randomize(selection, username):
     content = file.read()
     listData = []
     listData = content.split("\n")
-    #print(listData)
     randomset = random.sample(listData, 10)
     #just raises an error if there isn't enough songs here.
     if len(randomset) != 10:
         raise ValueError("There are not 10 songs in this list.")
-    #print("\n".join(randomset))
+    print("\n".join(randomset))
+    #comment the cyclecontinue out when running the tests on the Unittest file.
+    cyclecontinue(selection, username)
     return(randomset)
-    #offer users the chance to do over.
-    #cyclecontinue(selection, username)
+    
+        
 
